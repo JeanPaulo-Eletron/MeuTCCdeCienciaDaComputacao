@@ -1,0 +1,23 @@
+#CaixaDeResposta{
+    Position: Absolute;
+    resize: none;
+    top: 10px;
+    left: 10px;
+    width: 500px;
+    height: 150px;
+}
+#CaixaDeTexto{
+    Position: Absolute;
+    resize: vertical;
+    top: 200px;
+    left: 10px;
+    width: 500px;
+    height: 75px;
+}
+#BtnEnviar{
+    Position: Absolute;
+    top: 168px;
+    left: 10px;
+    width: 506px;
+    height: 30px;   
+}
