@@ -5,6 +5,7 @@ if (window.Worker) {
 	BtnEnviar.onclick = ()=>{
         myWorker.postMessage(CaixaDeTexto.value)
         console.log('Message posted to worker');
+        CaixaDeTexto.value = ""
     }
 
 	myWorker.onmessage = function(e) {
