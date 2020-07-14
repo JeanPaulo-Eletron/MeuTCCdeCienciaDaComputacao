@@ -12,6 +12,11 @@ var Contexto = {
     Temas: ["Big Bang", "Formação da terra"],
     Tema: "Big Bang"
 };
+var Agente = {
+    Acao: ["OI", "TUDO"],
+    Reacao: ["Oi tudo bem?", "Tudo o que?"],
+    Nivel1: ["", "Oi tudo bem?"]
+}
 
 function GetWords(frase) {
     let vetor = frase.split(" ");
@@ -43,8 +48,6 @@ function removerVogaisRepetidas(frase){
     let fraseFinal = [];
     let palavra = "";
     frase.forEach((item) => {
-        console.log(item);
-        console.log(item.length);
         for (let i = 0; i < item.length; i++){
             if( (item[i-1] !== item[i]) || ( ! isVogal(item[i]) ) ){
             palavra += item[i];
@@ -57,31 +60,29 @@ function removerVogaisRepetidas(frase){
     return fraseFinal;
 }
 
-function agenteOi() {
-    let Tamanho       = Contexto.Foco.length;
-    let IndexVet      = Contexto.Foco.indexOf("OI");
-    if (IndexVet!==-1){
-        Contexto.Foco.splice(IndexVet, 1);
-        if (Tamanho != Contexto.Foco.length){
-            Contexto.Compreensao.push("Oi tudo bem?");
-            console.log('Disparador Ação-Reação acionado: "OI" ');
-            Contexto.Nivel1 = Contexto.Nivel1.concat("OI");
+function tratarCaracteresEspeciais(frase){
+    let fraseTratada     = [];
+    let palavra          = "";
+    let caracterEspecial = "";
+    frase.forEach((item)=>{
+        for (let i = 0; i < item.length; i++){
+            caracterEspecial = "";
+            if( (item[i] !== '\n') && (item[i] !== ',') && (item[i] !== '.'))
+                palavra += item[i]
+                else 
+            if (item[i] == ',')
+                caracterEspecial = ","
+                else
+            if (item[i] == '.')
+                caracterEspecial = "."
         }
-    }
-}
-
-function agenteTudo(){
-    let Tamanho       = Contexto.Foco.length;
-    let IndexVet      = Contexto.Foco.indexOf("TUDO");
-    if (IndexVet!==-1){
-        Contexto.Foco.splice(IndexVet, 1);
-        if (Tamanho != Contexto.Foco.length){
-            Contexto.Compreensao.push("Tudo o que?");
-            console.log('Disparador Ação-Reação acionado: "TUDO" ');
-            Contexto.Nivel1 = Contexto.Nivel1.concat("TUDO");
-        }       
-    }
-    agenteBem();//Se a pessoa falou, "Tudo" e deu enter "Bem", ele não entrará no if.
+        fraseTratada.push(palavra);
+        if (caracterEspecial != "")
+            fraseTratada.push(caracterEspecial);
+        console.log("Caractere especial tratado: " + caracterEspecial);
+        palavra = "";
+    })
+    return fraseTratada;
 }
 
 // Agente de nível 1
@@ -100,15 +101,34 @@ function agenteBem(){
                 console.log('Disparador Ação-Reação acionado: "TUDO BEM?" ');
                 Contexto.Nivel2 = Contexto.Nivel2.concat("TUDO","BEM?");
             }       
-        }    
+        } 
     }
+}
+
+function callAgents(){
+    Agente.Acao.forEach((item, index)=>{
+        console.log(item);
+        console.log("idx: "+index);
+        let Tamanho       = Contexto.Foco.length;
+        let IndexVet      = Contexto.Foco.indexOf(item);
+        if (IndexVet!==-1){
+            Contexto.Foco.splice(IndexVet, 1);
+            if (Tamanho != Contexto.Foco.length){
+                Contexto.Compreensao.push(Agente.Reacao[index]);
+                console.log('Disparador Ação-Reação acionado: "'+item+'" ');
+                Contexto.Nivel1 = Contexto.Nivel1.concat(item);
+            }       
+        }
+        if (item == "TUDO")
+            agenteBem();//Se a pessoa falou, "Tudo" e deu enter "Bem", ele não entrará no if.
+    })    
 }
 
 function Processar() {
 //    var myWorkerAgenteOi = new Worker('Agentes de ação-reação\Compreensaores de contexto Foco\myWorkerAgenteOi.js');
-    agenteOi();
-    agenteTudo();
+    callAgents();
 }
+
 /* Disparador de esquecimento Contexto Foco -> Memoria de Trabalho */
 setInterval(()=>{
     console.log('Esquecendo o que está no contexto Foco...');
@@ -126,9 +146,10 @@ setInterval(()=>{
     console.log("O que esta na memoria de longo prazo agora:" + Contexto.MemoriaLongoPrazo);
 },30000)
 /* INICIO */
+
 onmessage = function(e) {
     console.log('Worker: Message received from main script');
-    Contexto.Foco = Contexto.Foco.concat(removerVogaisRepetidas(GetWords(e.data)));
+    Contexto.Foco = Contexto.Foco.concat(tratarCaracteresEspeciais(removerVogaisRepetidas(GetWords(e.data))));
     console.log("Foco: " + Contexto.Foco)
     Processar();
     if(!ativo){
