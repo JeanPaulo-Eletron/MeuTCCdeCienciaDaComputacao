@@ -1,9 +1,7 @@
-importScripts('Tratamento de texto/Utilitarios.js');
-importScripts('Agentes de ação-reação/Agentes de superficie.js');
+importScripts('Tratamento de texto/Utilitarios.js', 'Agentes de ação-reação/Agentes de superficie.js');
 
 function Processar() {
-//    var myWorkerAgenteOi = new Worker('Agentes de ação-reação\Compreensaores de contexto Foco\myWorkerAgenteOi.js');
-    callAgents();
+    AgenteAcaoReacaoDeFocoObserver.notify();
 }
 
 /* Disparador de esquecimento Contexto Foco -> Memoria de Trabalho */
