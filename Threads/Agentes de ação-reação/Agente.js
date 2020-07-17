@@ -1,4 +1,4 @@
-var ativo
+var ativo;
 var TextoSaida = "";
 var Contexto = {
     Foco: [ ],
@@ -12,25 +12,79 @@ var Contexto = {
     Temas: ["Big Bang", "Formação da terra"],
     Tema: "Big Bang"
 };
+var timeIDReply;
+var TimeOfReply;
+var compreensaoASeremEliminadas = [ ];
+
+function yellReply(_TimeOfReply){
+    TimeOfReply = _TimeOfReply;
+    if (! (timeIDReply === undefined))
+        clearTimeout(timeIDReply)
+    timeIDReply = setTimeout(()=>{
+        console.log("Compreensão: "+Contexto.Compreensao);
+        TextoSaida = "";    
+        Contexto.Compreensao.forEach((item)=>{
+            console.log("Compreensão(item a item): " + item);
+            TextoSaida = TextoSaida + item + " ";
+            compreensaoASeremEliminadas.push(item);
+        });
+        console.log("compreensao a serem eliminadas: " + compreensaoASeremEliminadas);
+        compreensaoASeremEliminadas.forEach((item)=>{Contexto.Compreensao.splice(Contexto.Compreensao.indexOf(item), 1);}) 
+        TextoSaida  = TextoSaida.substring(0, TextoSaida.length-1);
+        if (TextoSaida == "")
+            TextoSaida = "Desculpe não consegui te entender."
+        const workerResult = 'Narrador: ' + TextoSaida;
+        console.log('Worker: Posting message back to main script');
+        postMessage(workerResult);  
+        TextoSaida = "";
+        ativo = false;
+        Contexto.Residual = Contexto.Residual.concat(Contexto.Compreensao);
+        Contexto.Compreensao = [];
+        compreensaoASeremEliminadas = [ ];
+    }, TimeOfReply)
+}
 
 class agente{
-    constructor(acao, reacao, levelUpCtx){
-        this.acao       = acao;
-        this.reacao     = reacao;
-        this.levelUpCtx = levelUpCtx;
+    constructor(acao, reacao, timeOfAllowance = 10000, levelUpCtx, TimeOfReply = 3000){
+        this.acao            = acao;
+        this.reacao          = reacao;
+        this.levelUpCtx      = levelUpCtx;
+        this.attend          = this.comply;
+        this.timeOfAllowance = timeOfAllowance; 
+        this.TimeOfReply     = TimeOfReply;
+        this.refused         = false;
     }
+    
     callAgent(){
-        console.log(this.acao);
+        this.attend(this.acao, this.reacao, this.levelUpCtx, this.TimeOfReply);
+    }
+    
+    comply(acao, reacao, levelUpCtx, TimeOfReply){
+        console.log(acao);
         let Tamanho       = Contexto.Foco.length;
-        let IndexVet      = Contexto.Foco.indexOf(this.acao);
+        let IndexVet      = Contexto.Foco.indexOf(acao);
         if (IndexVet!==-1){
             Contexto.Foco.splice(IndexVet, 1);
-            Contexto.Compreensao.push(this.reacao);
-            console.log('Disparador Ação-Reação acionado: "'+this.acao+'" ');
-            Contexto.Nivel1 = Contexto.Nivel1.concat(this.acao);
+            Contexto.Compreensao.push(reacao);
+            console.log('Disparador Ação-Reação acionado: "'+acao+'" ');
+            Contexto.Nivel1 = Contexto.Nivel1.concat(acao);
         }
-        if (! (this.levelUpCtx === undefined) )
-            this.levelUpCtx();
+        if (! (levelUpCtx === undefined) )
+            levelUpCtx();
+        this.attend = this.refuse;
+        if (! (this.timeOfWit === undefined) )
+            clearInterval(this.timeOfWit)
+        this.timeOfWit = setTimeout(()=>{
+            this.attend  = this.comply
+            this.refused = false
+        }, this.timeOfAllowance)
+        yellReply(TimeOfReply);
+    }
+    
+    refuse(acao, reacao, levelUpCtx){
+        if (! (this.refused))
+            this.comply(acao, 'Você está repetitivo...', levelUpCtx, 5000);   
+        this.refused = true;
     }
 }
 

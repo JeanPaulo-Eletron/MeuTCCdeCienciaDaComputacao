@@ -27,31 +27,6 @@ onmessage = function(e) {
     Contexto.Foco = Contexto.Foco.concat(tratarCaracteresEspeciais(removerVogaisRepetidas(GetWords(e.data))));
     console.log("Foco: " + Contexto.Foco)
     Processar();
-    if(!ativo){
-        let compreensaoASeremEliminadas = [ ];
-        ativo = true;
-        setTimeout(()=>{
-        console.log("Compreensão: "+Contexto.Compreensao);
-        TextoSaida = "";    
-        Contexto.Compreensao.forEach((item)=>{
-            console.log("Compreensão(item a item): " + item);
-            TextoSaida = TextoSaida + item + " ";
-            compreensaoASeremEliminadas.push(item);
-        });
-        console.log("compreensao a serem eliminadas: " + compreensaoASeremEliminadas);
-        compreensaoASeremEliminadas.forEach((item)=>{Contexto.Compreensao.splice(Contexto.Compreensao.indexOf(item), 1);}) 
-        TextoSaida  = TextoSaida.substring(0, TextoSaida.length-1);
-        if (TextoSaida == "")
-            TextoSaida = "Desculpe não consegui te entender."
-        const workerResult = 'Narrador: ' + TextoSaida;
-        console.log('Worker: Posting message back to main script');
-        postMessage(workerResult);  
-        TextoSaida = "";
-        ativo = false;
-        Contexto.Residual = Contexto.Residual.concat(Contexto.Compreensao);
-        Contexto.Compreensao = [];
-        }, 3000)
-    }
 }
 
 /*
