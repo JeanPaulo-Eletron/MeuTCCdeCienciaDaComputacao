@@ -1,6 +1,7 @@
 importScripts('Tratamento de texto/Utilitarios.js', 'Agentes de ação-reação/Agentes de superficie.js');
 
 function Processar() {
+    AgentesActor.notify();
     AgenteAcaoReacaoDeFocoObserver.notify();
 }
 

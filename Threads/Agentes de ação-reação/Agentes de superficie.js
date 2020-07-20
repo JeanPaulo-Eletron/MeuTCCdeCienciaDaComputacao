@@ -1,4 +1,4 @@
-importScripts('Padrões de projeto/Observer.js', 'Agentes de ação-reação/Agente.js');
+importScripts('Agentes de ação-reação/Agentes Atores.js');
 
 const AgenteAcaoReacaoDeFocoObserver = new Observable();
 

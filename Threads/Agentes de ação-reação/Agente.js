@@ -1,3 +1,4 @@
+importScripts('Padrões de projeto/Observer.js');
 var ativo;
 var TextoSaida = "";
 var Contexto = {
@@ -114,5 +115,19 @@ class agenteLevel1{
         }
         if (! (this.levelUpCtx === undefined) )
             this.levelUpCtx();
+    }
+}
+
+class Actor{
+    constructor(historia){
+        this.historia = historia;
+    }
+    contarHistoria(){
+        console.log("Passou!"+this.historia);
+        if(this.historia != ''){
+            console.log("Passou!");
+            postMessage(this.historia);
+            this.historia = '';
+        }
     }
 }
