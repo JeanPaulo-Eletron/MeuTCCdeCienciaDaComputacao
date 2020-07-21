@@ -20,8 +20,8 @@ var compreensaoASeremEliminadas = [ ];
 function yellReply(_TimeOfReply){
     TimeOfReply = _TimeOfReply;
     if (! (timeIDReply === undefined))
-        clearTimeout(timeIDReply)
-    timeIDReply = setTimeout(()=>{
+        clearInterval(timeIDReply)
+    timeIDReply = setInterval(()=>{
         console.log("Compreensão: "+Contexto.Compreensao);
         TextoSaida = "";    
         Contexto.Compreensao.forEach((item)=>{
@@ -32,16 +32,17 @@ function yellReply(_TimeOfReply){
         console.log("compreensao a serem eliminadas: " + compreensaoASeremEliminadas);
         compreensaoASeremEliminadas.forEach((item)=>{Contexto.Compreensao.splice(Contexto.Compreensao.indexOf(item), 1);}) 
         TextoSaida  = TextoSaida.substring(0, TextoSaida.length-1);
-        if (TextoSaida == "")
-            TextoSaida = "Desculpe não consegui te entender."
-        const workerResult = 'Narrador: ' + TextoSaida;
-        console.log('Worker: Posting message back to main script');
-        postMessage(workerResult);  
-        TextoSaida = "";
-        ativo = false;
-        Contexto.Residual = Contexto.Residual.concat(Contexto.Compreensao);
-        Contexto.Compreensao = [];
-        compreensaoASeremEliminadas = [ ];
+        if (TextoSaida !== ""){
+            const workerResult = '\nNarrador: ' + TextoSaida;
+            console.log('Worker: Posting message back to main script');
+            postMessage(workerResult);  
+            TextoSaida = "";
+            ativo = false;
+            Contexto.Residual = Contexto.Residual.concat(Contexto.Compreensao);
+            Contexto.Compreensao = [];
+            compreensaoASeremEliminadas = [ ];
+            clearInterval(timeIDReply);
+        };
     }, TimeOfReply)
 }
 
@@ -84,7 +85,7 @@ class agente{
     
     refuse(acao, reacao, levelUpCtx){
         if (! (this.refused))
-            this.comply(acao, 'Você está repetitivo...', levelUpCtx, 5000);   
+            this.comply(acao, 'Você está repetitivo...\n', levelUpCtx, 5000);   
         this.refused = true;
     }
 }
@@ -108,7 +109,7 @@ class agenteLevel1{
                 Contexto.Foco.splice(IndexVet2, 1);
                 Contexto.Compreensao.splice(Contexto.Compreensao.indexOf(this.DesfazerReacao),1)
                 Contexto.Compreensao.splice(Contexto.Compreensao.indexOf(this.DesfazerReacao2),1)
-                Contexto.Compreensao.push(this.reacao);
+                Contexto.Compreensao.push(this.reacao+"\n");
                 console.log('Disparador Ação-Reação acionado: "'+this.acaoFoco + this.acaoNivel1 +'" ');
                 Contexto.Nivel2 = Contexto.Nivel2.concat(this.acaoFoco,this.acaoNivel1);      
             } 
@@ -120,14 +121,18 @@ class agenteLevel1{
 
 class Actor{
     constructor(historia){
-        this.historia = historia;
-    }
-    contarHistoria(){
-        console.log("Passou!"+this.historia);
+        this.historia = historia.split(" ");
+    }    contarHistoria(){
         if(this.historia != ''){
-            console.log("Passou!");
-            postMessage(this.historia);
-            this.historia = '';
+            var idIntervalActorContarHistoria = setInterval(()=>{
+                postMessage(this.historia[0]);
+                this.historia.splice(0,1);
+                console.log(this.historia);
+                if(this.historia.length === 0){
+                    postMessage('.');
+                    clearInterval(idIntervalActorContarHistoria) 
+                } else postMessage(' ');
+            }, 1000)
         }
     }
 }

@@ -15,7 +15,7 @@ if (window.Worker) {
     }); 
     
 	myWorker.onmessage = function(e) {
-        CaixaDeResposta.textContent += e.data + "\n";
+        CaixaDeResposta.textContent += e.data;
 		console.log('Message received from worker'+e.data);
 	}
 } else {
