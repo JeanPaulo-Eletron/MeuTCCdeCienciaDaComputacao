@@ -15,36 +15,7 @@ var Contexto = {
 };
 var timeIDReply;
 var TimeOfReply;
-var compreensaoASeremEliminadas = [ ];
-
-function yellReply(_TimeOfReply){
-    TimeOfReply = _TimeOfReply;
-    if (! (timeIDReply === undefined))
-        clearInterval(timeIDReply)
-    timeIDReply = setInterval(()=>{
-        console.log("Compreensão: "+Contexto.Compreensao);
-        TextoSaida = "";    
-        Contexto.Compreensao.forEach((item)=>{
-            console.log("Compreensão(item a item): " + item);
-            TextoSaida = TextoSaida + item + " ";
-            compreensaoASeremEliminadas.push(item);
-        });
-        console.log("compreensao a serem eliminadas: " + compreensaoASeremEliminadas);
-        compreensaoASeremEliminadas.forEach((item)=>{Contexto.Compreensao.splice(Contexto.Compreensao.indexOf(item), 1);}) 
-        TextoSaida  = TextoSaida.substring(0, TextoSaida.length-1);
-        if (TextoSaida !== ""){
-            const workerResult = '\nNarrador: ' + TextoSaida;
-            console.log('Worker: Posting message back to main script');
-            postMessage(workerResult);  
-            TextoSaida = "";
-            ativo = false;
-            Contexto.Residual = Contexto.Residual.concat(Contexto.Compreensao);
-            Contexto.Compreensao = [];
-            compreensaoASeremEliminadas = [ ];
-            clearInterval(timeIDReply);
-        };
-    }, TimeOfReply)
-}
+var compreensaoASeremEliminadas = [ ]; 
 
 class agente{
     constructor(acao, reacao, timeOfAllowance = 10000, levelUpCtx, TimeOfReply = 3000){
@@ -59,6 +30,35 @@ class agente{
     
     callAgent(){
         this.attend(this.acao, this.reacao, this.levelUpCtx, this.TimeOfReply);
+    }
+    
+    yellReply(_TimeOfReply){
+        TimeOfReply = _TimeOfReply;
+        if (! (timeIDReply === undefined))
+            clearInterval(timeIDReply)
+        timeIDReply = setInterval(()=>{
+            console.log("Compreensão: "+Contexto.Compreensao);
+            TextoSaida = "";    
+            Contexto.Compreensao.forEach((item)=>{
+                console.log("Compreensão(item a item): " + item);
+                TextoSaida = TextoSaida + item + " ";
+                compreensaoASeremEliminadas.push(item);
+            });
+            console.log("compreensao a serem eliminadas: " + compreensaoASeremEliminadas);
+            compreensaoASeremEliminadas.forEach((item)=>{Contexto.Compreensao.splice(Contexto.Compreensao.indexOf(item), 1);}) 
+            TextoSaida  = TextoSaida.substring(0, TextoSaida.length-1);
+            if (TextoSaida !== ""){
+                const workerResult = '\nNarrador: ' + TextoSaida;
+                console.log('Worker: Posting message back to main script');
+                postMessage(workerResult);  
+                TextoSaida = "";
+                ativo = false;
+                Contexto.Residual = Contexto.Residual.concat(Contexto.Compreensao);
+                Contexto.Compreensao = [];
+                compreensaoASeremEliminadas = [ ];
+                clearInterval(timeIDReply);
+            };
+        }, TimeOfReply)
     }
     
     comply(acao, reacao, levelUpCtx, TimeOfReply){
@@ -80,7 +80,7 @@ class agente{
             this.attend  = this.comply
             this.refused = false
         }, this.timeOfAllowance)
-        yellReply(TimeOfReply);
+        this.yellReply(TimeOfReply);
     }
     
     refuse(acao, reacao, levelUpCtx){
@@ -122,8 +122,9 @@ class agenteLevel1{
 class Actor{
     constructor(historia){
         this.historia = historia.split(" ");
-    }    contarHistoria(){
-        if(this.historia != ''){
+    }    
+    contarHistoria(){
+        if(this.historia.lenght !== 0){
             var idIntervalActorContarHistoria = setInterval(()=>{
                 postMessage(this.historia[0]);
                 this.historia.splice(0,1);
