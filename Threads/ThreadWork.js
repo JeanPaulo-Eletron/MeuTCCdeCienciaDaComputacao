@@ -5,22 +5,6 @@ function Processar() {
     AgenteAcaoReacaoDeFocoObserver.notify();
 }
 
-/* Disparador de esquecimento Contexto Foco -> Memoria de Trabalho */
-setInterval(()=>{
-    console.log('Esquecendo o que está no contexto Foco...');
-    console.log("O que estava no contexto Foco: " + Contexto.Foco);
-    Contexto.MemoriaDeTrabalho = Contexto.MemoriaDeTrabalho.concat(Contexto.Foco);
-    Contexto.Foco.splice(0,Contexto.Foco.length)
-    console.log("O que esta na memoria de trabalho agora:" + Contexto.MemoriaDeTrabalho);
-},10000)
-/* Disparador de esquecimento Memoria de Trabalho -> Memoria de Longo Prazo */
-setInterval(()=>{
-    console.log('Esquecendo o que está na memória de trabalho...');
-    console.log("O que estava na memoria de trabalho: " + Contexto.MemoriaDeTrabalho);
-    Contexto.MemoriaLongoPrazo = Contexto.MemoriaLongoPrazo.concat(Contexto.MemoriaDeTrabalho);
-    Contexto.MemoriaDeTrabalho.splice(0,Contexto.MemoriaDeTrabalho.length)
-    console.log("O que esta na memoria de longo prazo agora:" + Contexto.MemoriaLongoPrazo);
-},30000)
 /* INICIO */
 
 onmessage = function(e) {
