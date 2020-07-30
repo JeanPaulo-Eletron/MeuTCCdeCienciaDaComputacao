@@ -1,5 +1,4 @@
-importScripts('Padrões de projeto/Observer.js');
-
+importScripts('Padrões de projeto/6_Observer.js');
 var ativo;
 var TextoSaida = "";
 var Contexto = {
@@ -19,6 +18,8 @@ var TimeOfReply;
 var neglectSetTimeout;
 var oblivionSetTimeout;
 var compreensaoASeremEliminadas = [ ]; 
+
+var observerContinuacaoHistoria = new Observable();
 
 class agente{
     constructor(acao, reacao, timeOfAllowance = 10000, levelUpCtx, TimeOfReply = 3000){
@@ -148,8 +149,9 @@ class agenteLevel1{
 }
 
 class Actor{
-    constructor(historia){
+    constructor(historia, observerContinuacaoHistoria){
         this.historia = historia.split(" ");
+        this.observerContinuacaoHistoria = observerContinuacaoHistoria;
     }    
     contarHistoria(){
         if(this.historia.lenght !== 0){
@@ -159,7 +161,9 @@ class Actor{
                 console.log(this.historia);
                 if(this.historia.length === 0){
                     postMessage('.');
-                    clearInterval(idIntervalActorContarHistoria) 
+                    clearInterval(idIntervalActorContarHistoria);
+                    console.log(self.observerContinuacaoHistoria);
+                    self.observerContinuacaoHistoria.notify();
                 } else postMessage(' ');
             }, 1000)
         }

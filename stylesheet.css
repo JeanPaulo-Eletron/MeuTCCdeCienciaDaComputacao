@@ -25,10 +25,17 @@ body{
 }
 #BtnEnviar{
     Position: Absolute;
-    margin-right: 6px;
     background-color: darkorange;
     top: 318px;
     left: 10px;
-    width: 75%;
+    width: 50%;
     height: 30px;   
+}
+#BtnContarHistoria{
+    Position: Absolute;
+    background-color: chartreuse;
+    top: 318px;
+    left: 394px;
+    width: 25%;
+    height: 30px;       
 }

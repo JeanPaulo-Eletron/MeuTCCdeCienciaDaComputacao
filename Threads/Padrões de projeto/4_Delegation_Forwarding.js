@@ -1,4 +1,4 @@
-importScripts('Agentes de ação-reação/Agente.js');
+importScripts('Agentes de ação-reação/5_Agente.js');
 // Eu utilizo hibridamente o padrão Delegation e o Forwarding
 class Delegate{
     constructor(Actor_historia, acao, reacao, timeOfAllowance = 10000, levelUpCtx, TimeOfReply = 3000){

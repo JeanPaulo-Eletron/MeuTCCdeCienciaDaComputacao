@@ -1,19 +1,25 @@
-importScripts('Tratamento de texto/Utilitarios.js', 'Agentes de ação-reação/Agentes de superficie.js');
+importScripts('Tratamento de texto/2_Utilitarios.js', 'Agentes de ação-reação/2_Agentes de superficie.js');
 
 function Processar() {
-    AgentesActor.notify();
     AgenteAcaoReacaoDeFocoObserver.notify();
+}
+
+function contarHistoria(){
+    AgentesActor.notify();
 }
 
 /* INICIO */
 
 onmessage = function(e) {
-    console.log('Worker: Message received from main script');
-    Contexto.Foco = Contexto.Foco.concat(tratarCaracteresEspeciais(removerVogaisRepetidas(GetWords(e.data))));
-    console.log("Foco: " + Contexto.Foco)
-    Processar();
+    if (e.data === true){
+        contarHistoria();    
+    }else{
+        console.log('Worker: Message received from main script');
+        Contexto.Foco = Contexto.Foco.concat(tratarCaracteresEspeciais(removerVogaisRepetidas(GetWords(e.data))));
+        console.log("Foco: " + Contexto.Foco)
+        Processar();
+    }
 }
-
 /*
 Requisito:
 ° A cada 10 segundos o contexto que está no contexto Foco será movido para a memória de trabalho, depois de 5 segundos a informação deve ser declarada como informação legada a frase que se deseja formular.(* Se ouver um "." todas as palavras que precederem esse "." serão movidas do contexto Foco para a memória de trabalho quando ele der a resposta).
