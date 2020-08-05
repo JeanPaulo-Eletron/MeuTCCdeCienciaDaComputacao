@@ -11,7 +11,7 @@ body{
     Position: Absolute;
     resize: none;
     top: 10px;
-    left: 10px;
+    left: 0.7%;
     width: 75%;
     height: 300px;
 }
@@ -19,7 +19,7 @@ body{
     Position: Absolute;
     resize: vertical;
     top: 350px;
-    left: 10px;
+    left: 0.7%;
     width: 75%;
     height: 75px;
 }
@@ -27,7 +27,7 @@ body{
     Position: Absolute;
     background-color: darkorange;
     top: 318px;
-    left: 10px;
+    left: 0.7%;
     width: 50%;
     height: 30px;   
 }
@@ -35,7 +35,7 @@ body{
     Position: Absolute;
     background-color: chartreuse;
     top: 318px;
-    left: 394px;
-    width: 25%;
+    left: 51.5%;
+    width: 24.7%;
     height: 30px;       
 }

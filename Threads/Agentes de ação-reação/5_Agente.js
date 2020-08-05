@@ -20,6 +20,12 @@ var oblivionSetTimeout;
 var compreensaoASeremEliminadas = [ ]; 
 
 var observerContinuacaoHistoria = new Observable();
+const ObserverCheckPriority = new Observable();
+
+ObserverCheckPriority.subscribe((data)=>{
+        if(data.word === 'OR')
+            data.callback(data.word);
+    });
 
 class agente{
     constructor(acao, reacao, timeOfAllowance = 10000, levelUpCtx, TimeOfReply = 3000){
@@ -41,6 +47,22 @@ class agente{
             Contexto.MemoriaDeTrabalho = Contexto.MemoriaDeTrabalho.concat(Contexto.Foco);
             Contexto.Foco.splice(0,Contexto.Foco.length)
             console.log("O que esta na memoria de trabalho agora:" + Contexto.MemoriaDeTrabalho);
+            Contexto.MemoriaDeTrabalho.forEach(
+                (item)=>{
+                    let callback = (item)=>{
+                            console.log('CallBack Alarm For Priority Chamado! :: ' + item + ' ::');
+                            Contexto.MemoriaDeTrabalho.splice(Contexto.MemoriaDeTrabalho.indexOf(item),1);
+                            Contexto.MemoriaLongoPrazo.splice(Contexto.MemoriaLongoPrazo.indexOf(item),1);
+                            Contexto.Foco.push(item);
+                        };
+                    let data = {
+                            word: item,
+                            callback: callback
+                        };
+                    // meditation time
+                    setTimeout(()=>{ObserverCheckPriority.notify(data);}, 1000);
+                }
+            )
             this.oblivion();
         },10000)
     }
@@ -162,7 +184,6 @@ class Actor{
                 if(this.historia.length === 0){
                     postMessage('.');
                     clearInterval(idIntervalActorContarHistoria);
-                    console.log(self.observerContinuacaoHistoria);
                     self.observerContinuacaoHistoria.notify();
                 } else postMessage(' ');
             }, 1000)
