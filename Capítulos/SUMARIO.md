@@ -5,4 +5,4 @@ Este TCC.
 > Autor: **[Jean Paulo Athanazio De Mei](https://github.com/JeanPaulo-Eletron)**  
 
 ## Sumário
-1 -  [Tecnologia para pessoas com deficiencia](Capitulos/deficiencia.md)    
+1 -  [Tecnologia para pessoas com deficiência](Capitulos/Tecnologia_para_pessoas_com_deficiência.md)    
