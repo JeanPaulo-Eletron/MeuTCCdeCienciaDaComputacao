@@ -8,3 +8,4 @@ Este TCC.
 1 -  [Tecnologia para pessoas com deficiência.](Capitulos/Tecnologia_para_pessoas_com_deficiência.md)    
 2 -  [Jogos para incentivar a diversão, inclusão, aprendizado e criatividade.](Capitulos/Jogos_Para_Incentivar.md)  
 3 -  [Uso da tecnologia para inclusão](Capitulos/Uso_da_tecnologia_para_inclusão.md)  
+4 -  [Inteligência artificial](Capitulos/Inteligência_artificial.md)
