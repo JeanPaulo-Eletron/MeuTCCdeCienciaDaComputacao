@@ -1,0 +1,135 @@
+% ---------------------------------------------------------------------------------------------------------------
+% TEMPLATE PARA TRABALHO DE CONCLUSÃO DE CURSO
+% Universidade Tecnológica Federal do Paraná - UTFPR
+% Campus Toledo
+% Baseado no projeto dos professores Diego Marczal e Michael Vornes
+% (http://tcc.tsi.gp.utfpr.edu.br/paginas/modelos-latex-da-utfpr)
+% 
+% Adaptado Pelo Prof. Felipe W. D. Pfrimer
+% Versão: 2018.01
+%
+%----------------------------------------------------------------------------------------------------------------
+% Codificação: UTF-8
+% LaTeX:  abnTeX2          
+% ---------------------------------------------------------------------------------------------------------------
+
+\newenvironment{midpage}{\vspace*{\fill}}{\vspace*{\fill}}
+
+\newenvironment{buttonpage}{\vspace*{\fill}}{}
+
+%CARREGA CLASSE PERSONALIZADA DA UTFPR--------------------------------------------------------------------------
+\documentclass[%twoside,                % Impressão em frente e verso
+    	        oneside,                % Impressão apenas frente
+]{configuracoes/utfpr-abntex2}
+
+\usepackage{float}
+
+% \documentclass[
+% 	% -- opções da classe memoir --
+% 	12pt,				% tamanho da fonte
+% 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+% 	oneside,			% para impressão em apenas um verso
+% 	%twoside,			% para impressão em verso e anverso. Oposto a oneside
+% 	a4paper,			% tamanho do papel. 
+% 	% -- opções da classe abntex2 --
+% 	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+% 	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+% 	subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+% 	subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+% 	% -- opções do pacote babel --
+% 	english,			% idioma adicional para hifenização
+% 	french,				% idioma adicional para hifenização
+% 	spanish,			% idioma adicional para hifenização
+% 	brazil				% o último idioma é o principal do documento
+% 	]{configuracoes/utfpr-abntex2}
+
+% DEFINE A NATUREZA DO TRABALHO (TCC1 OU TCC2)-------------------------------------------------------------------
+\newif\iftcctype
+\tcctypetrue  % Comente essa linha para TCC2
+
+% INCLUI ARQUIVOS DE CONFIGURAÇÕES-------------------------------------------------------------------------------
+\include{configuracoes/pacotes}
+\include{configuracoes/configuracoes-pdf}
+
+% INCLUI ARQUIVOS DO TRABALHO DE CONCLUSÃO DE CURSO (PRÉ-TEXTUAIS, TEXTUAIS, PÓS-TEXTUAIS)-----------------------
+
+% INSERE CAPA E FOLHA DE ROSTO
+\include{comum/capa}
+\include{comum/folha-rosto}
+
+\begin{document}
+	
+\newcommand{\SubItem}[1]{
+	{\setlength\itemindent{15pt} \bfseries \item[•] #1}
+}
+
+\pretextual
+\imprimircapa    						% Comando para imprimir Capa
+\imprimirfolhaderosto{}             	% Comando para imprimir Folha de rosto
+%\include{comum/ficha-catalografica}     % Ficha catalográfica (opcional)
+% Obs: a capa e folha de rosto são gerados de acordo com \tcctype
+
+\iftcctype % Se TCC1
+% INSERE ELEMENTOS TEXTUAIS DO TCC1 (os elementos opcionais podem ser comentados)
+
+\include{tcc1/dedicadoria}
+\include{tcc1/agradecimentos}
+\include{tcc1/frasedeefeito}
+\include{tcc1/resumo}										% Resumo do TCC1
+\include{comum/listas/lista-figuras}   	% Lista de Figuras
+\include{comum/listas/lista-quadros}   	% Lista de Quadros (opcional)
+\include{comum/listas/lista-tabelas}    % Lista de Tabelas
+\include{comum/listas/lista-siglas}     % Lista de Abreviaturas e Siglas
+\include{comum/listas/lista-simbolos}   % Lista de Símbolos
+\include{comum/listas/lista-algoritmos} % Lista de Algoritmos (opcional)
+\include{comum/sumario}               	% Sumário
+%---------texto-----------------------------------------------------------------
+\textual
+\include{tcc1/introducao}				% Introdução
+\include{tcc1/delimitacao}				% Delimitação do Tema (opcional - edital de tcc)
+\include{tcc1/problemas}				% Problemas e Premissas (opcional - edital de tcc)
+\include{tcc1/objetivos}                % Objetivos
+\include{tcc1/justificativa}            % Justificativa
+\include{tcc1/referencial-teorico}      % Referencial teorico
+%\include{tcc1/materiais-metodos}        % Materiais e metodologia
+%\include{tcc1/demonstrativos}           % Demonstrativo de recursos (opcional - edital de tcc)
+%\include{tcc1/resultados}        		% Resultados esperados
+%\include{tcc1/cronograma}        		% Resultados esperados
+%\include{comum/orientacoes}           	% Orientações sobre o modelo Latex (comentar essa linha ao iniciar a escrita)
+%---------pós texto-------------------------------------------------------------
+\postextual
+\include{comum/referencias}           	% Referências
+\include{tcc1/apendices}                % Apêndices
+\include{tcc1/anexos}               	% Anexos
+
+
+\else % Se TCC2
+% INSERE ELEMENTOS TEXTUAIS DO TCC2 (os elementos opcionais podem ser comentados)
+\include{tcc2/folha-aprovacao}
+\include{tcc2/dedicatoria}          	% Dedicatória (opcional)
+\include{tcc2/agradecimentos}        	% Agradecimentos (opcional)
+\include{tcc2/epigrafe}              	% Epígrafe (opcional)
+\include{tcc2/resumo}             		% Resumo em Português
+\include{tcc2/abstract}             	% Resumo em Inglês
+\include{comum/listas/lista-figuras}   	% Lista de Figuras
+\include{comum/listas/lista-quadros}   	% Lista de Quadros (opcional)
+\include{comum/listas/lista-tabelas}    % Lista de Tabelas
+\include{comum/listas/lista-siglas}     % Lista de Abreviaturas e Siglas
+\include{comum/listas/lista-simbolos}   % Lista de Símbolos
+\include{comum/listas/lista-algoritmos} % Lista de Algoritmos (opcional)
+\include{comum/sumario}               	% Sumário
+%---------texto-----------------------------------------------------------------
+\textual
+\include{tcc2/introducao}               % Introdução
+\include{tcc2/objetivos}                % Objetivos
+\include{tcc2/justificativa}            % Justificativa
+\include{tcc2/referencial-teorico}      % Referencial teorico
+
+%---------pós texto-------------------------------------------------------------
+\postextual
+\include{comum/referencias}           	% Referências
+\include{tcc2/apendices}             	% Apêndices
+
+\fi % fim do if
+
+\end{document}
