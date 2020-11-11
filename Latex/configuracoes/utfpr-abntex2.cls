@@ -137,7 +137,7 @@
 
 % Comandos de dados - Logomarca da instituição
 \providecommand{\imprimirlogoinstituicao}{}
-\newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}{\includegraphics[width={#1}\textwidth]{#2}}}
+\newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}{\includegraphics{#2}}}
 
 % -----------------------------------------------------------------------------
 % Estilo de elementos
@@ -374,6 +374,7 @@
     \begin{capa}
         \begin{center}
 		\begin{SingleSpacing}
+			{\imprimirlogoinstituicao}\\
             		\large\MakeUppercase{\imprimirinstituicao} \\
 	    		\abntex@ifnotempty{\imprimirdepartamento}
             		{
