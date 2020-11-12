@@ -56,6 +56,30 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Database file #1: abntex2-options.bib
 Database file #2: ./base-referencias.bib
+Warning--entry type for "whocomputing" isn't style-file defined
+--line 1 of file ./base-referencias.bib
+Warning--string name "novembro" is undefined
+--line 4 of file ./base-referencias.bib
+Warning--entry type for "GitConflict" isn't style-file defined
+--line 9 of file ./base-referencias.bib
+Warning--string name "novembro" is undefined
+--line 12 of file ./base-referencias.bib
+Warning--entry type for "whygit" isn't style-file defined
+--line 18 of file ./base-referencias.bib
+Warning--string name "novembro" is undefined
+--line 21 of file ./base-referencias.bib
+Warning--entry type for "githow" isn't style-file defined
+--line 26 of file ./base-referencias.bib
+Warning--string name "novembro" is undefined
+--line 29 of file ./base-referencias.bib
+Warning--entry type for "sourcetree" isn't style-file defined
+--line 34 of file ./base-referencias.bib
+Warning--string name "novembro" is undefined
+--line 37 of file ./base-referencias.bib
+Warning--entry type for "SeparationOfConcerns" isn't style-file defined
+--line 42 of file ./base-referencias.bib
+Warning--string name "novembro" is undefined
+--line 45 of file ./base-referencias.bib
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
 Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
@@ -65,44 +89,45 @@ Reallocating 'global_strs' (item size: 1) to 4000000 items.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 6 entries,
+You've used 12 entries,
             6714 wiz_defined-function locations,
-            1223 strings with 9893 characters,
-and the built_in function-call counts, 2097 in all, are:
-= -- 247
-> -- 3
-< -- 3
-+ -- 51
-- -- 3
-* -- 81
-:= -- 274
-add.period$ -- 0
-call.type$ -- 7
-change.case$ -- 18
-chr.to.int$ -- 13
-cite$ -- 0
-duplicate$ -- 25
-empty$ -- 260
-format.name$ -- 0
-if$ -- 571
+            1249 strings with 10711 characters,
+and the built_in function-call counts, 14893 in all, are:
+= -- 1975
+> -- 93
+< -- 493
++ -- 571
+- -- 33
+* -- 781
+:= -- 1782
+add.period$ -- 24
+call.type$ -- 13
+change.case$ -- 54
+chr.to.int$ -- 19
+cite$ -- 6
+duplicate$ -- 1639
+empty$ -- 602
+format.name$ -- 138
+if$ -- 2893
 int.to.chr$ -- 5
 int.to.str$ -- 3
-missing$ -- 61
-newline$ -- 8
-num.names$ -- 0
-pop$ -- 44
+missing$ -- 157
+newline$ -- 38
+num.names$ -- 30
+pop$ -- 188
 preamble$ -- 1
-purify$ -- 18
+purify$ -- 36
 quote$ -- 0
-skip$ -- 313
+skip$ -- 1957
 stack$ -- 1
-substring$ -- 74
-swap$ -- 3
-text.length$ -- 0
+substring$ -- 672
+swap$ -- 547
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 2
+while$ -- 44
 width$ -- 0
-write$ -- 8
+write$ -- 92
+(There were 12 warnings)

@@ -22,7 +22,15 @@ O que é o GPT-3?
 
 \section{O ramo da computação e seus desafios.}
 \label{sec:RamoComputacaoDesafios}
-	A computação pode ser definida como a busca de uma solução para um problema a partir de entradas e tem seus resultados depois de trabalhada através de um algoritmo. É com isto que lida a teoria da computação, subcampo da ciência da computação e da matemática. 
+Em termos gerais, a computação pode ser definida como uma atividade realizada para processar as informações por meio de computadores. Esta atividade inclui o desenvolvimento de software e hardware também.
+
+A utilização da tecnologia de computador para completar a tarefa é conhecida como computação.
+
+Em um sentido moderno, usamos computadores para uma infinidade de finalidades - uma das quais é a crescente variedade de opções de entretenimento. No entanto, o hardware de computação moderno foi desenvolvido a partir de aparelhos muito maiores e muito mais básicos, nascidos principalmente da necessidade. O dispositivo computacional original era o ábaco, que foi supostamente inventado na antiga Babilônia por volta de 2.300 a.C. Algum tempo depois (por volta de 100 a.C.), o mecanismo de Antikythera foi usado para prever movimentos astronômicos com décadas de antecedência. Leia mais sobre a história da computação - Uma breve história da computação. 
+
+\cite{whocomputing}
+
+É com isto que lida a teoria da computação, subcampo da ciência da computação e da matemática. 
 
 \section{O GIT}
 \label{sec:OGIT}
@@ -30,7 +38,7 @@ O que é o GPT-3?
 	\subsection{VANTAGENS DE USAR O GIT}
 	\label{sec:VANTAGENSGIT}
 
-		Imagine que você esteja escrevendo um texto importante, escrevendo e apagando várias e várias vezes. Agora imagine que você tenha alterado seu texto demais e queira que ele volte a ser o que era antes, então você queria ter uma máquina do tempo, como a \textbf{TARDIS} da série cientifica \textbf{Doctor Who} e com ela você possa viajar no tempo e reescrever o texto a um ponto do passado. Isso é o que o \textbf{GIT} tenta fazer, ou seja, da mesma forma que a Tardis, ele grava todas as alterações dos arquivos de texto rastreados por ele, sendo possível realizar “\textbf{Commits}” que nada mais é que marcos dessas alterações, como se fosse uma data importante que algo relevante aconteceu, sendo possível voltar a esse ponto depois. \textbf{(citação)} 
+		Imagine que você esteja escrevendo um texto importante, escrevendo e apagando várias e várias vezes. Agora imagine que você tenha alterado seu texto demais e queira que ele volte a ser o que era antes, então você queria ter uma máquina do tempo, como a \textbf{TARDIS} da série cientifica \textbf{Doctor Who} e com ela você possa viajar no tempo e reescrever o texto a um ponto do passado. Isso é o que o \textbf{GIT} tenta fazer, ou seja, da mesma forma que a Tardis, ele grava todas as alterações dos arquivos de texto rastreados por ele, sendo possível realizar “\textbf{Commits}” que nada mais é que marcos dessas alterações, como se fosse uma data importante que algo relevante aconteceu, sendo possível voltar a esse ponto depois. 		
 
 \begin{figure}
 	\subsection{CONTROLE DE VERSÃO COM O GIT}
@@ -50,11 +58,11 @@ ele permite que grandes equipes de programadores trabalhem de
 forma independente em suas próprias cópias do código, rastreiem
 alterações com granularidade linha por linha, mesclem essas
 alterações de volta no repositório principal e reverta as 
-alterações conforme o necessário. (citação) 	
+alterações conforme o necessário. \cite{whygit} 	
 
-Para utiliza-lo, deve-se criar um repositório, clonar esse repositório e dar um \textbf{pull} (puxar) e fazer suas alterações no arquivo, devendo-se fazer um \textbf{commit} dessas alterações para marcar um revisão, depois de realizar todos os \textbf{commits} necessários com todas as revisões necessárias o usuário deve fazer o \textbf{push} (enviar) para o repositório para que as alterações e revisões vá para o repositório. (citação) 
+Para utiliza-lo, deve-se criar um repositório, clonar esse repositório e dar um \textbf{pull} (puxar) e fazer suas alterações no arquivo, devendo-se fazer um \textbf{commit} dessas alterações para marcar um revisão, depois de realizar todos os \textbf{commits} necessários com todas as revisões necessárias o usuário deve fazer o \textbf{push} (enviar) para o repositório para que as alterações e revisões vá para o repositório.\cite{githow} 
 
-Para tanto, conta-se com a ajuda de um programa com uma interface visual de controle de versão (também conhecido como controle de revisão), o \textbf{scv} (sistema de controle de versão). ele mostra as linhas adicionadas com um destaque em verde e as linhas removidas com um destaque em vermelho, caso altere uma linha já existente ele coloca consecutivamente a remoção da linha antiga e a adição da linha nova. (citação) 				
+Para tanto, conta-se com a ajuda de um programa com uma interface visual de controle de versão (também conhecido como controle de revisão), o \textbf{scv} (sistema de controle de versão). ele mostra as linhas adicionadas com um destaque em verde e as linhas removidas com um destaque em vermelho, caso altere uma linha já existente ele coloca consecutivamente a remoção da linha antiga e a adição da linha nova. \cite{sourcetree}				
 
 Vantagens de usá-lo: 
 \begin{description}
@@ -67,7 +75,7 @@ Vantagens de usá-lo:
 	
 	\item[•] Saber quem realizou as alterações, bem como sugerir a correção necessária. 
 	
-	\item[•] Em situações que dois programadores alterem o mesmo arquivo o sistema de controle de versão junta essas alterações através do merge e, caso alterem a mesma linha, o programador informa a ferramenta apropriada qual a linha correta. (citação) 
+	\item[•] Em situações que dois programadores alterem o mesmo arquivo o sistema de controle de versão junta essas alterações através do merge e, caso alterem a mesma linha, o programador informa a ferramenta apropriada qual a linha correta. \cite{GitConflict}
 	
 \end{description}  	
 
@@ -77,7 +85,7 @@ Vantagens de usá-lo:
 	\centering
 	\includegraphics[scale=0.9]{./images/Figure_2}	
 	
-	Para este TCC decidi utilizar o SourceTree.	
+	Para este TCC o SourceTree foi o principal programa utilizado para o versionamento, juntamente com o GITHUB DESKTOP.	
 	
 	\label{fig:Fig2}
 \end{figure}
@@ -91,42 +99,39 @@ Muitos projetos \textbf{Open Source} foram criados a partir dele e, com esses pr
 \begin{figure}[H]
 	\centering
 	\caption{Imagem do GITHUB}
-	\includegraphics[scale=0.5]{./images/Figure_3}		
+	\includegraphics[scale=0.75]{./images/Figure_3}		
 	\label{fig:Fig3}
 \end{figure}
 
 	\subsection{README}
 	\label{subsec:README}
 		É um arquivo que é exibido seu conteúdo de forma sumária ao entrar no repositório.
-		
-	\subsection{DIÁRIO DE BORDO}	
-	\label{subsec:DIARIODEBORDO}
-		Pode ser usado para traçar metas e objetivos como se fosse um diário colocando o dia e o que foi feito ou deverá ser feito no futuro. 
-		
+
+	
 \section{EXPERIÊNCIA DO USUÁRIO}
 \label{sec:EXPERIENCIADOUSUARIO}
 
-Experiência do usuário (UX), trata da interação do usuário com um
-determinado produto, sistema ou serviço cujo resultado gera uma
-percepção positiva ou negativa. Segundo Norman, UX envolve não somente
-aspectos relacionados ao design (hardware, software, interface,
-usabilidade, facilidade de busca etc), mas também destaca os aspectos
-afetivos e experienciais, significativos e valiosos de interação
-humano-computador e propriedade do produto. A experiência do usuário é
-de natureza subjetiva, pois é sobre a percepção e pensamento individual
-no que diz respeito ao sistema. Ela é também dinâmica, pois é
-constantemente modificada ao longo do tempo, devido à evolução das
-circunstâncias e inovações. (citação)
-
-Um conceito importante no design UX como os usuários formam
-experiências. Quando o usuário encontra um produto, forma uma impressão
-momentânea, que evolui ao longo do tempo. (citação)
-
-Neste processo, a percepção, ação, motivação e cognição do usuário se
-integram para formar uma história memorável: chamada “experiência do
-usuário”. Esse processo provoca respostas emocionais, que determinam em
-grande parte se a experiência será considerada positiva ou negativa.
-(citação) 
+	Experiência do usuário (UX), trata da interação do usuário com um
+	determinado produto, sistema ou serviço cujo resultado gera uma
+	percepção positiva ou negativa. Segundo Norman, UX envolve não somente
+	aspectos relacionados ao design (hardware, software, interface,
+	usabilidade, facilidade de busca etc), mas também destaca os aspectos
+	afetivos e experienciais, significativos e valiosos de interação
+	humano-computador e propriedade do produto. A experiência do usuário é
+	de natureza subjetiva, pois é sobre a percepção e pensamento individual
+	no que diz respeito ao sistema. Ela é também dinâmica, pois é
+	constantemente modificada ao longo do tempo, devido à evolução das
+	circunstâncias e inovações. (citação)
+	
+	Um conceito importante no design UX como os usuários formam
+	experiências. Quando o usuário encontra um produto, forma uma impressão
+	momentânea, que evolui ao longo do tempo. (citação)
+	
+	Neste processo, a percepção, ação, motivação e cognição do usuário se
+	integram para formar uma história memorável: chamada “experiência do
+	usuário”. Esse processo provoca respostas emocionais, que determinam em
+	grande parte se a experiência será considerada positiva ou negativa.
+	(citação) 
 
 \section{HTML}
 \label{sec:HTML}
@@ -146,12 +151,12 @@ grande parte se a experiência será considerada positiva ou negativa.
 	\end{figure}
 	\begin{description} 
 		\item[Separation of concerns(Separação de conceitos):]
-			antes de explicar o que são as camadas de desenvolvimento é importante conhecer o conceito de “separação de conceitos”, ela se refere a um princípio de projeto que permite a separação de um sistema em diferentes módulos. ao se combinar esses módulos tem-se o software, que pode ser uma página da web um hardware ou softwares desktop. essa separação é fortemente recomendável quando o software envolve uma complexidade muito alta e atende diferentes departamentos em uma única solução, com diversas regras de negócio diferentes, como módulo contábil, financeiro, rh, custos, controle de estoque, vendas... se ele foi programado de modo desacoplado(ou seja a alteração no código de um módulo não influencia no outro), definimos o software como modularizado, já que é constituído de diferentes partes. cada módulo pode ser alocado para uma equipe diferente de desenvolvimento, capacitada nas respectivas regras de negócio. assim, além de facilitar a manutenção, cada módulo poderá ser atualizado independentemente dos outros módulos. o delphi, por exemplo, propicia a modularização do software através de arquivos bpl para simplificar a atualização. (citação)\\\\	
+			antes de explicar o que são as camadas de desenvolvimento é importante conhecer o conceito de “separação de conceitos”, ela se refere a um princípio de projeto que permite a separação de um sistema em diferentes módulos. ao se combinar esses módulos tem-se o software, que pode ser uma página da web um hardware ou softwares desktop. essa separação é fortemente recomendável quando o software envolve uma complexidade muito alta e atende diferentes departamentos em uma única solução, com diversas regras de negócio diferentes, como módulo contábil, financeiro, rh, custos, controle de estoque, vendas... se ele foi programado de modo desacoplado(ou seja a alteração no código de um módulo não influencia no outro), definimos o software como modularizado, já que é constituído de diferentes partes. cada módulo pode ser alocado para uma equipe diferente de desenvolvimento, capacitada nas respectivas regras de negócio. assim, além de facilitar a manutenção, cada módulo poderá ser atualizado independentemente dos outros módulos. o delphi, por exemplo, propicia a modularização do software através de arquivos bpl para simplificar a atualização. \cite{SeparationOfConcerns}\\\\	
 			programadores web praticam a separação de conceitos indiretamente. para construir uma página, normalmente quatro linguagens são utilizadas, cada uma com um propósito em particular: (citação) 
 			
 			\begin{description}
 				\setlength\itemindent{15pt}
-				\item[•] HTML
+				\item[•] {HTML}
 				\item[•] {CSS}
 				\item[•] {JAVASCRIPT}
 				\item[•] {BACKEND(PHYTON)}
@@ -164,7 +169,7 @@ grande parte se a experiência será considerada positiva ou negativa.
 			o back-end (“retaguarda”) de uma página, é responsável por manipular informações do banco de dados e executar operações de tratamento e envio de informações, com um servidor central ou distribuído, no escopo desse trabalho serão feitas pela linguagem phyton. (citação)				
 	\end{description} 	
 	  
-	\subsection{ESTRUTURA DO HTML5 (CONFERI ATÉ AQUI, MAS ESTÁ FALTANDO CITAÇÕES EM TODO O REFERENCIAL TEÓRICO. SENDO ASSIM, PEÇO QUE FAÇA A CORREÇÃO NESSE SENTIDO E FINALIZO A CORREÇÃO.)}
+	\subsection{ESTRUTURA DO HTML5}
 	\label{subsec:ESTRUTURAHTML5}
 	
 	html (abreviação para a expressão inglesa hypertext markup language, que significa linguagem de marcação de hipertexto) é uma linguagem de marcação utilizada na construção de páginas na web.  (citação) 

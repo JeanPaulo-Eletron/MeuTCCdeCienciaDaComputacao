@@ -5,4 +5,39 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
+\bibitem[BitBucket 2020]{whygit}
+\abntrefinfo{BitBucket}{BITBUCKET}{2020}
+{BITBUCKET, A. \textbf{Why git?} 2020.
+Dispon{\'\i}vel em:
+  \url{https://www.atlassian.com/git/tutorials/why-git\#:~:text=One\%20of\%20the\%20biggest\%20advantages,every\%20change\%20to\%20your\%20codebase.}}
+
+\bibitem[Celestino 2020]{SeparationOfConcerns}
+\abntrefinfo{Celestino}{CELESTINO}{2020}
+{CELESTINO, A.~L. \textbf{Entendendo a Separação de Conceitos (Separation of
+  Concerns – SoC)}. 2020.
+Dispon{\'\i}vel em:
+  \url{https://www.profissionaisti.com.br/entendendo-a-separacao-de-conceitos-separation-of-concerns-soc/}.}
+
+\bibitem[GitHowTo 2020]{githow}
+\abntrefinfo{GitHowTo}{GITHOWTO}{2020}
+{GITHOWTO. \textbf{Why git?} 2020.
+Dispon{\'\i}vel em: \url{https://githowto.com/pt-BR}.}
+
+\bibitem[Mike 2020]{whocomputing}
+\abntrefinfo{Mike}{MIKE}{2020}
+{MIKE, D. \textbf{What is computing?} 2020.
+Dispon{\'\i}vel em: \url{https://www.quora.com/What-is-computing}.}
+
+\bibitem[Silva 2020]{GitConflict}
+\abntrefinfo{Silva}{SILVA}{2020}
+{SILVA, J. \textbf{What is a Git Merge Conflict?} 2020.
+Dispon{\'\i}vel em:
+  \url{https://blog.axosoft.com/learn-git-merge-conflict/\#:~:text=A\%20merge\%20conflict\%20is\%20an,merge\%20commits\%20without\%20your\%20help}.}
+
+\bibitem[SourceTree 2020]{sourcetree}
+\abntrefinfo{SourceTree}{SOURCETREE}{2020}
+{SOURCETREE. \textbf{Get started with Sourcetree}. 2020.
+Dispon{\'\i}vel em:
+  \url{https://confluence.atlassian.com/get-started-with-sourcetree}.}
+
 \end{thebibliography}

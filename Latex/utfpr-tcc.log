@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.10)  10 NOV 2020 22:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.10)  11 NOV 2020 23:55
 entering extended mode
 **./utfpr-tcc.tex
 (utfpr-tcc.tex
@@ -1390,20 +1390,11 @@ l.16 \cleardoublepage
 ])
 \openout2 = `comum/sumario.aux'.
 
- (comum/sumario.tex (utfpr-tcc.toc
-Overfull \hbox (0.73595pt too wide) in paragraph at lines 21--21
- \T1/ptm/m/n/12 (-20) TANDO CI-TA-«’ES EM TODO O RE-FE-REN-CIAL TE”-RICO. SENDO
- 
- []
-
-
-Underfull \vbox (badness 1043) has occurred while \output is active []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
+ (comum/sumario.tex (utfpr-tcc.tocpdfTeX warning (ext4): destination with the s
+ame identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.33 ...{6.1}Ap√™ndice - C√≥digo}{21}{section.6.1}
+l.36 ...sline {part}{Ap\^endices}{25}{section*.14}
                                                   % [19
 
 
@@ -1437,68 +1428,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--22
 
  []
 
-<./images/Figure_1.png, id=198, 552.56438pt x 179.92218pt>
-File: ./images/Figure_1.png Graphic file (type png)
-<use ./images/Figure_1.png>
-Package pdftex.def Info: ./images/Figure_1.png  used on input line 42.
-(pdftex.def)             Requested size: 414.42226pt x 134.9413pt.
-[3
+
+Underfull \vbox (badness 1205) has occurred while \output is active []
+
+ [3
 
 
 
 
 ]
-<./images/Figure_2.png, id=203, 553.31718pt x 292.84406pt>
-File: ./images/Figure_2.png Graphic file (type png)
-<use ./images/Figure_2.png>
-Package pdftex.def Info: ./images/Figure_2.png  used on input line 78.
-(pdftex.def)             Requested size: 497.98087pt x 263.5572pt.
-
-Overfull \hbox (42.98087pt too wide) in paragraph at lines 78--79
- [][] 
- []
+<./images/Figure_1.png, id=200, 552.56438pt x 179.92218pt>
+File: ./images/Figure_1.png Graphic file (type png)
+<use ./images/Figure_1.png>
+Package pdftex.def Info: ./images/Figure_1.png  used on input line 50.
+(pdftex.def)             Requested size: 414.42226pt x 134.9413pt.
 
 [4pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.90 
-      <./images/Figure_1.png>]
-<./images/Figure_3.png, id=209, 618.05907pt x 327.47343pt>
+l.67 V
+      antagens de us√°-lo: <./images/Figure_1.png>]
+<./images/Figure_2.png, id=216, 553.31718pt x 292.84406pt>
+File: ./images/Figure_2.png Graphic file (type png)
+<use ./images/Figure_2.png>
+Package pdftex.def Info: ./images/Figure_2.png  used on input line 86.
+(pdftex.def)             Requested size: 497.98087pt x 263.5572pt.
+
+Overfull \hbox (42.98087pt too wide) in paragraph at lines 86--87
+ [][] 
+ []
+
+<./images/Figure_3.png, id=217, 618.05907pt x 327.47343pt>
 File: ./images/Figure_3.png Graphic file (type png)
 <use ./images/Figure_3.png>
-Package pdftex.def Info: ./images/Figure_3.png  used on input line 94.
-(pdftex.def)             Requested size: 309.02878pt x 163.73631pt.
+Package pdftex.def Info: ./images/Figure_3.png  used on input line 102.
+(pdftex.def)             Requested size: 463.54317pt x 245.60448pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (8.54317pt too wide) in paragraph at lines 102--104
+ [][] 
+ []
 
- [5pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
-}) has been already used, duplicate ignored
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}
+) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.102 	\subsection
-                  {DI√ÅRIO DE BORDO}	pdfTeX warning (ext4): destination with th
-e same identifier (name{figure.2.3}) has been already used, duplicate ignored
+l.104 \end{figure}
+                   <./images/Figure_2.png>] [6pdfTeX warning (ext4): destinatio
+n with the same identifier (name{figure.2.3}) has been already used, duplicate 
+ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.102 	\subsection
-                  {DI√ÅRIO DE BORDO}	 <./images/Figure_2.png> <./images/Figure_
-3.png>]
-<./images/Figure_4.png, id=214, 557.08125pt x 298.86656pt>
+l.139 	\subsection
+                  {CAMADAS DE DESENVOLVIMENTO} <./images/Figure_3.png>]
+<./images/Figure_4.png, id=228, 557.08125pt x 298.86656pt>
 File: ./images/Figure_4.png Graphic file (type png)
 <use ./images/Figure_4.png>
-Package pdftex.def Info: ./images/Figure_4.png  used on input line 141.
+Package pdftex.def Info: ./images/Figure_4.png  used on input line 146.
 (pdftex.def)             Requested size: 501.3685pt x 268.9774pt.
 
-Overfull \hbox (46.3685pt too wide) in paragraph at lines 141--142
+Overfull \hbox (46.3685pt too wide) in paragraph at lines 146--147
  [][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6]
-Underfull \hbox (badness 10000) in paragraph at lines 149--151
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
 
  []
 
@@ -1506,25 +1500,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--151
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.157 				\item[‚Ä¢]
-                     {BACKEND(PHYTON)} <./images/Figure_4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 160--165
+l.156 			
+          <./images/Figure_4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 165--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--165
+Underfull \hbox (badness 10000) in paragraph at lines 165--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--165
+Underfull \hbox (badness 10000) in paragraph at lines 165--170
 
  []
 
 [8]
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 18
-2.
+7.
  (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -1532,38 +1526,42 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<./images/Figure_5.png, id=227, 565.36218pt x 207.02344pt>
+<./images/Figure_5.png, id=240, 565.36218pt x 207.02344pt>
 File: ./images/Figure_5.png Graphic file (type png)
 <use ./images/Figure_5.png>
-Package pdftex.def Info: ./images/Figure_5.png  used on input line 193.
+Package pdftex.def Info: ./images/Figure_5.png  used on input line 198.
 (pdftex.def)             Requested size: 424.02058pt x 155.26718pt.
-<./images/Figure_6.png, id=228, 338.76563pt x 412.54124pt>
-File: ./images/Figure_6.png Graphic file (type png)
-<use ./images/Figure_6.png>
-Package pdftex.def Info: ./images/Figure_6.png  used on input line 210.
-(pdftex.def)             Requested size: 338.76479pt x 412.54024pt.
 
 [9pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.213 
-       <./images/Figure_5.png>] [10pdfTeX warning (ext4): destination with the 
-same identifier (name{figure.2.6}) has been already used, duplicate ignored
+l.210 
+       <./images/Figure_5.png>]
+<./images/Figure_6.png, id=246, 338.76563pt x 412.54124pt>
+File: ./images/Figure_6.png Graphic file (type png)
+<use ./images/Figure_6.png>
+Package pdftex.def Info: ./images/Figure_6.png  used on input line 215.
+(pdftex.def)             Requested size: 338.76479pt x 412.54024pt.
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.224 
-       <./images/Figure_6.png>]
-<./images/Figure_7.png, id=239, 395.22656pt x 268.75406pt>
+l.227 
+       <./images/Figure_6.png>] [11]
+<./images/Figure_7.png, id=256, 395.22656pt x 268.75406pt>
 File: ./images/Figure_7.png Graphic file (type png)
 <use ./images/Figure_7.png>
-Package pdftex.def Info: ./images/Figure_7.png  used on input line 252.
+Package pdftex.def Info: ./images/Figure_7.png  used on input line 257.
 (pdftex.def)             Requested size: 395.22559pt x 268.7534pt.
- [11] [12pdfTeX warning (ext4): destination with the same identifier (name{figu
-re.2.7}) has been already used, duplicate ignored
+
+Underfull \vbox (badness 1430) has occurred while \output is active []
+
+ [12pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.274 
+l.279 
        <./images/Figure_7.png>]) [13]
 \openout2 = `tcc1/problemas.aux'.
 
@@ -1614,7 +1612,40 @@ l.274
 ]
 bibitemlist
 
-LaTeX Warning: Empty `thebibliography' environment on input line 8.
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+\T1/ptm/m/n/12 (+20) why-[]git# : ~ : text = One % 20of % 20the % 20biggest % 2
+0advantages ,[] every % 20change % 20to %
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]\T1/ptm/m/n/12 (+20) CELESTINO, A. L. \T1/ptm/b/n/12 En-ten-dendo a Se-pa-ra-
+Á„o de Con-cei-tos (Se-pa-ra-tion of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\T1/ptm/b/n/12 Con-cerns  SoC)\T1/ptm/m/n/12 (+20) . 2020. Dis-po-nÌ-vel em: [
+][]$<[]https : / / www . prossionaisti . com . br /
+ []
+
+
+Underfull \hbox (badness 3019) in paragraph at lines 20--20
+\T1/ptm/m/n/12 (+20) entendendo-[]a-[]separacao-[]de-[]conceitos-[]separation-[
+]of-[]concerns-[]soc / >[]$[][].  Ci-tado na p·-gina
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]\T1/ptm/m/n/12 (+20) MIKE, D. \T1/ptm/b/n/12 What is com-pu-ting? \T1/ptm/m/n
+/12 (+20) 2020. Dis-po-nÌ-vel em: [][]$<[]https : / / www . quora . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\T1/ptm/m/n/12 (+10) learn-[]git-[]merge-[]conict / # : ~ : text = A % 20merge
+ % 20conict % 20is % 20an ,[] merge % 20commits %
+ []
 
 )) [23]
 \openout2 = `tcc1/apendices.aux'.
@@ -1678,26 +1709,26 @@ LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
 (tcc1/justificativa.aux) (tcc1/referencial-teorico.aux) (comum/referencias.aux)
 (tcc1/apendices.aux) (tcc1/anexos.aux))
 Package rerunfilecheck Info: File `utfpr-tcc.brf' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 58CE28C67795E7F22B353FCE4E74A59F;286.
  )
 (\end occurred when \iftrue on line 72 was incomplete) 
 Here is how much of TeX's memory you used:
- 17136 strings out of 479832
- 274415 string characters out of 2870113
- 734723 words of memory out of 3000000
- 33323 multiletter control sequences out of 15000+200000
- 570804 words of font info for 180 fonts, out of 3000000 for 9000
+ 17199 strings out of 479832
+ 275381 string characters out of 2870113
+ 734369 words of memory out of 3000000
+ 33375 multiletter control sequences out of 15000+200000
+ 571064 words of font info for 184 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 114i,13n,115p,1747b,543s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 114i,13n,115p,1747b,496s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Usuario/AppData
 /Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/Usuario/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Usuario/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on utfpr-tcc.pdf (56 pages, 794438 bytes).
+Output written on utfpr-tcc.pdf (56 pages, 804995 bytes).
 PDF statistics:
- 527 PDF objects out of 1000 (max. 8388607)
- 103 named destinations out of 1000 (max. 500000)
- 26017 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 556 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
+ 26009 words of extra memory for PDF output out of 29859 (max. 10000000)
 

@@ -9,22 +9,21 @@
 \contentsline {section}{\numberline {1.4}ORGANIZAÇÃO DO TRABALHO}{2}{section.1.4}%
 \contentsline {chapter}{\chapternumberline {2}FUNDAMENTAÇÃO TEORICA}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}O ramo da computação e seus desafios.}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}O GIT}{3}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}VANTAGENS DE USAR O GIT}{3}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}CONTROLE DE VERSÃO COM O GIT}{4}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.2}O GIT}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}VANTAGENS DE USAR O GIT}{4}{subsection.2.2.1}%
 \contentsline {section}{\numberline {2.3}O GITHUB}{5}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}README}{6}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}DIÁRIO DE BORDO}{6}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}EXPERIÊNCIA DO USUÁRIO}{6}{section.2.4}%
-\contentsline {section}{\numberline {2.5}HTML}{6}{section.2.5}%
+\contentsline {section}{\numberline {2.5}HTML}{7}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}CAMADAS DE DESENVOLVIMENTO}{7}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}ESTRUTURA DO HTML5 (CONFERI ATÉ AQUI, MAS ESTÁ FALTANDO CITAÇÕES EM TODO O REFERENCIAL TEÓRICO. SENDO ASSIM, PEÇO QUE FAÇA A CORREÇÃO NESSE SENTIDO E FINALIZO A CORREÇÃO.)}{8}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.2}ESTRUTURA DO HTML5}{8}{subsection.2.5.2}%
 \contentsline {section}{\numberline {2.6}CSS}{9}{section.2.6}%
 \contentsline {section}{\numberline {2.7}LÓGICA DE PROGRAMAÇÃO }{10}{section.2.7}%
 \contentsline {section}{\numberline {2.8}ALGORITMOS}{11}{section.2.8}%
 \contentsline {section}{\numberline {2.9}PHYTON}{12}{section.2.9}%
 \contentsline {section}{\numberline {2.10}INTELIGÊNCIA ARTIFICIAL}{12}{section.2.10}%
-\contentsline {section}{\numberline {2.11}REDES NEURAIS E APRENDIZADO DE MÁQUINA}{12}{section.2.11}%
+\contentsline {section}{\numberline {2.11}REDES NEURAIS E APRENDIZADO DE MÁQUINA}{13}{section.2.11}%
 \contentsline {section}{\numberline {2.12}OPENAI, GPT-2 E GPT-3}{13}{section.2.12}%
 \contentsline {chapter}{\chapternumberline {3}REVISÃO BIBLIOGRÁFICA(TRABALHOS PARECIDOS)}{15}{chapter.3}%
 \contentsline {chapter}{\chapternumberline {4}DESENVOLVIMENTO}{17}{chapter.4}%
