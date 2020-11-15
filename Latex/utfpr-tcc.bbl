@@ -28,16 +28,42 @@ Dispon{\'\i}vel em: \url{https://githowto.com/pt-BR}.}
 {MIKE, D. \textbf{What is computing?} 2020.
 Dispon{\'\i}vel em: \url{https://www.quora.com/What-is-computing}.}
 
+\bibitem[P{\'e}rez 2019]{perez2019introduccion}
+\abntrefinfo{P{\'e}rez}{P{\'E}REZ}{2019}
+{P{\'E}REZ, J.~E. \textbf{introduccion a JavaScript}. 2019. 5--9~p.}
+
+\bibitem[Ramos et al. 2016]{ramos2016design}
+\abntrefinfo{Ramos et al.}{RAMOS et al.}{2016}
+{RAMOS, M. et al. Design de servi{\c{c}}os e experi{\^e}ncia do usu{\'a}rio
+  (ux): uma an{\'a}lise do relacionamento das {\'a}reas.
+\textbf{DAPesquisa}, v.~11, n.~16, p. 105--123, 2016.}
+
 \bibitem[Silva 2020]{GitConflict}
 \abntrefinfo{Silva}{SILVA}{2020}
 {SILVA, J. \textbf{What is a Git Merge Conflict?} 2020.
 Dispon{\'\i}vel em:
   \url{https://blog.axosoft.com/learn-git-merge-conflict/\#:~:text=A\%20merge\%20conflict\%20is\%20an,merge\%20commits\%20without\%20your\%20help}.}
 
+\bibitem[Silva 2007]{silva2007construindo}
+\abntrefinfo{Silva}{SILVA}{2007}
+{SILVA, M.~S. \textbf{Construindo sites com CSS e (X) HTML: sites controlados
+  por folhas de estilo em cascata}. [S.l.]: Novatec Editora, 2007. 49--56~p.}
+
 \bibitem[SourceTree 2020]{sourcetree}
 \abntrefinfo{SourceTree}{SOURCETREE}{2020}
 {SOURCETREE. \textbf{Get started with Sourcetree}. 2020.
 Dispon{\'\i}vel em:
   \url{https://confluence.atlassian.com/get-started-with-sourcetree}.}
+
+\bibitem[Souto 2019]{alura}
+\abntrefinfo{Souto}{SOUTO}{2019}
+{SOUTO, M. \textbf{O que é front-end e back-end?} 2019.
+Dispon{\'\i}vel em:
+  \url{https://www.alura.com.br/artigos/o-que-e-front-end-e-back-end}.}
+
+\bibitem[Torres 2018]{torres2018html}
+\abntrefinfo{Torres}{TORRES}{2018}
+{TORRES, V.~M. Html e seus componentes.
+\textbf{Revista Ada Lovelace}, v.~2, p. 99--101, 2018.}
 
 \end{thebibliography}
