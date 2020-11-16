@@ -25,19 +25,19 @@
 \contentsline {section}{\numberline {2.10}INTELIGÊNCIA ARTIFICIAL}{12}{section.2.10}%
 \contentsline {section}{\numberline {2.11}REDES NEURAIS E APRENDIZADO DE MÁQUINA}{13}{section.2.11}%
 \contentsline {section}{\numberline {2.12}OPENAI, GPT-2 E GPT-3}{13}{section.2.12}%
-\contentsline {chapter}{\chapternumberline {3}REVISÃO BIBLIOGRÁFICA(TRABALHOS PARECIDOS)}{15}{chapter.3}%
-\contentsline {chapter}{\chapternumberline {4}DESENVOLVIMENTO}{17}{chapter.4}%
-\contentsline {chapter}{\chapternumberline {5}ANÁLISE}{19}{chapter.5}%
-\contentsline {chapter}{\chapternumberline {6}CONCLUSÕES}{21}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Apêndice - Código}{21}{section.6.1}%
-\contentsline {chapter}{Refer\^encias}{23}{chapter*.13}%
+\contentsline {chapter}{\chapternumberline {3}REVISÃO BIBLIOGRÁFICA(TRABALHOS PARECIDOS)}{14}{chapter.3}%
+\contentsline {chapter}{\chapternumberline {4}DESENVOLVIMENTO}{15}{chapter.4}%
+\contentsline {chapter}{\chapternumberline {5}ANÁLISE}{16}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {6}CONCLUSÕES}{17}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Apêndice - Código}{17}{section.6.1}%
+\contentsline {chapter}{Refer\^encias}{18}{chapter*.13}%
 \vspace {\cftbeforepartskip }
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
-\contentsline {part}{Ap\^endices}{25}{section*.14}%
-\contentsline {appendix}{\chapternumberline {A}Nome do apêndice}{27}{appendix.A}%
-\contentsline {appendix}{\chapternumberline {B}Nome do outro apêndice}{29}{appendix.B}%
+\contentsline {part}{Ap\^endices}{19}{section*.14}%
+\contentsline {appendix}{\chapternumberline {A}Nome do apêndice}{20}{appendix.A}%
+\contentsline {appendix}{\chapternumberline {B}Nome do outro apêndice}{21}{appendix.B}%
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
-\contentsline {part}{Anexos}{31}{section*.15}%
-\contentsline {appendix}{\chapternumberline {A}Nome do anexo}{33}{appendix.anexochapback.1}%
-\contentsline {appendix}{\chapternumberline {B}Nome do outro anexo}{35}{appendix.anexochapback.2}%
+\contentsline {part}{Anexos}{22}{section*.15}%
+\contentsline {appendix}{\chapternumberline {A}Nome do anexo}{23}{appendix.anexochapback.1}%
+\contentsline {appendix}{\chapternumberline {B}Nome do outro anexo}{24}{appendix.anexochapback.2}%

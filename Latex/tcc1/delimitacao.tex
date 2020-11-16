@@ -121,18 +121,20 @@ Muitos projetos \textbf{Open Source} foram criados a partir dele e, com esses pr
 	de natureza subjetiva, pois é sobre a percepção e pensamento individual
 	no que diz respeito ao sistema. Ela é também dinâmica, pois é
 	constantemente modificada ao longo do tempo, devido à evolução das
-	circunstâncias e inovações. (citação)
+	circunstâncias e inovações.
+	\cite{ramos2016design}
 	
 	Um conceito importante no design UX como os usuários formam
 	experiências. Quando o usuário encontra um produto, forma uma impressão
-	momentânea, que evolui ao longo do tempo. (citação)
+	momentânea, que evolui ao longo do tempo.
+	\cite{ramos2016design}
 	
 	Neste processo, a percepção, ação, motivação e cognição do usuário se
 	integram para formar uma história memorável: chamada “experiência do
 	usuário”. Esse processo provoca respostas emocionais, que determinam em
 	grande parte se a experiência será considerada positiva ou negativa.
-	(citação) 
-
+	\cite{ramos2016design}
+	
 \section{HTML}
 \label{sec:HTML}
 	Antes de falar sobre HTML será necessário trazer à tona o conceito de camadas de desenvolvimento:
@@ -145,14 +147,16 @@ Muitos projetos \textbf{Open Source} foram criados a partir dele e, com esses pr
 		\centering
 		\includegraphics[scale=0.9]{./images/Figure_4}	
 		
-		Para este TCC decidi utilizar o SourceTree.	
+		Para este TCC será utilizado o SourceTree.	
 		
 		\label{fig:Fig4}
 	\end{figure}
 	\begin{description} 
 		\item[Separation of concerns(Separação de conceitos):]
-			antes de explicar o que são as camadas de desenvolvimento é importante conhecer o conceito de “separação de conceitos”, ela se refere a um princípio de projeto que permite a separação de um sistema em diferentes módulos. ao se combinar esses módulos tem-se o software, que pode ser uma página da web um hardware ou softwares desktop. essa separação é fortemente recomendável quando o software envolve uma complexidade muito alta e atende diferentes departamentos em uma única solução, com diversas regras de negócio diferentes, como módulo contábil, financeiro, rh, custos, controle de estoque, vendas... se ele foi programado de modo desacoplado(ou seja a alteração no código de um módulo não influencia no outro), definimos o software como modularizado, já que é constituído de diferentes partes. cada módulo pode ser alocado para uma equipe diferente de desenvolvimento, capacitada nas respectivas regras de negócio. assim, além de facilitar a manutenção, cada módulo poderá ser atualizado independentemente dos outros módulos. o delphi, por exemplo, propicia a modularização do software através de arquivos bpl para simplificar a atualização. \cite{SeparationOfConcerns}\\\\	
-			programadores web praticam a separação de conceitos indiretamente. para construir uma página, normalmente quatro linguagens são utilizadas, cada uma com um propósito em particular: (citação) 
+			antes de explicar o que são as camadas de desenvolvimento é importante conhecer o conceito de “separação de conceitos”, ela se refere a um princípio de projeto que permite a separação de um sistema em diferentes módulos. Ao se combinar esses módulos tem-se o software, que pode ser uma página da web um hardware ou softwares desktop. Essa separação é fortemente recomendável quando o software envolve uma complexidade muito alta e atende diferentes departamentos em uma única solução, com diversas regras de negócio diferentes, como módulo contábil, financeiro, rh, custos, controle de estoque, vendas... Se ele foi programado de modo desacoplado(ou seja a alteração no código de um módulo não influencia no outro), definimos o software como modularizado, já que é constituído de diferentes partes. Cada módulo pode ser alocado para uma equipe diferente de desenvolvimento, capacitada nas respectivas regras de negócio. Assim, além de facilitar a manutenção, cada módulo poderá ser atualizado independentemente dos outros módulos. O delphi, por exemplo, propicia a modularização do software através de arquivos bpl para simplificar a atualização. Programadores web praticam a separação de conceitos indiretamente.
+			\cite{SeparationOfConcerns}
+			
+			Para construir uma página, normalmente quatro linguagens são utilizadas, cada uma com um propósito em particular:
 			
 			\begin{description}
 				\setlength\itemindent{15pt}
@@ -162,11 +166,19 @@ Muitos projetos \textbf{Open Source} foram criados a partir dele e, com esses pr
 				\item[•] {BACKEND(PHYTON)}
 			\end{description}
 				
-			nas quais poderemos intitulá-las como agentes de “conceitos”.  
-			o html, é utilizado para descrever, dar significado, organizar e formatar o conteúdo de uma página, ou seja cada item/objeto contido nela estará lá, uma analogia seria com uma receita de bolo, você escreve a ordem correta de cada um dos ingredientes serem colocados (na página), assim o navegador consegue construir o site, porém ele não consegue modificar propriedades de um elemento/objeto da página depois de criado, e também não consegue fornecer um estilo próprio aquele objeto, essas atribuições são dadas ao css e javascript. (citação)\\\\			
-			a linguagem css, por sua vez, edita a apresentação do conteúdo gerado pela linguagem html, fornecendo estilos aos componentes/objetos da página através do seu nome(id) ou através do nome do grupo ao qual aquele objeto pertence(classe), ou seja deixar ela bonita visualmente, fazendo outra analogia seria como colocar uma roupagem em cima do objeto feito pelo html. (citação)\\\\			
-			o javascript é empregado para executar scripts do lado do cliente, ou seja alterar como os objetos já existentes se comportam ou tem de propriedade e criar objetos novos ao longo do tempo, dar comportamento a página, comportando-se de forma assíncrona para alterar a exibição do conteúdo sem comunicação com o servidor. (o jquery, por exemplo, fornece funções ajax, que permitem a alteração de um componente da página sem a necessidade de recarregá-la). (citação)\\\\		
-			o back-end (“retaguarda”) de uma página, é responsável por manipular informações do banco de dados e executar operações de tratamento e envio de informações, com um servidor central ou distribuído, no escopo desse trabalho serão feitas pela linguagem phyton. (citação)				
+			nas quais poderemos intitulá-las como agentes de “conceitos”.
+			
+			  
+			O html, é utilizado para descrever, dar significado, organizar e formatar o conteúdo de uma página, ou seja cada item/objeto contido nela estará lá, uma analogia seria com uma receita de bolo, você escreve a ordem correta de cada um dos ingredientes serem colocados (na página), assim o navegador consegue construir o site, porém ele não consegue modificar propriedades de um elemento/objeto da página depois de criado, e também não consegue fornecer um estilo próprio aquele objeto, essas atribuições são dadas ao css e javascript.
+			\cite{torres2018html}\\
+						
+			A linguagem css, por sua vez, edita a apresentação do conteúdo gerado pela linguagem html, fornecendo estilos aos componentes/objetos da página através do seu nome(id) ou através do nome do grupo ao qual aquele objeto pertence(classe), ou seja deixar ela bonita visualmente, fazendo outra analogia seria como colocar uma roupagem em cima do objeto feito pelo html.
+			\cite{silva2007construindo}\\
+						
+			O javascript é empregado para executar scripts do lado do cliente, ou seja alterar como os objetos já existentes se comportam ou tem de propriedade e criar objetos novos ao longo do tempo, dar comportamento a página, comportando-se de forma assíncrona para alterar a exibição do conteúdo sem comunicação com o servidor. (o jquery, por exemplo, fornece funções ajax, que permitem a alteração de um componente da página sem a necessidade de recarregá-la). \cite{perez2019introduccion}\\
+				
+			O back-end (“retaguarda”) de uma página, é responsável por manipular informações do banco de dados e executar operações de tratamento e envio de informações, com um servidor central ou distribuído, no escopo desse trabalho serão feitas pela linguagem phyton. 
+			\cite{alura}			
 	\end{description} 	
 	  
 	\subsection{ESTRUTURA DO HTML5}

@@ -80,6 +80,10 @@ Warning--entry type for "SeparationOfConcerns" isn't style-file defined
 --line 42 of file ./base-referencias.bib
 Warning--string name "novembro" is undefined
 --line 45 of file ./base-referencias.bib
+Warning--entry type for "alura" isn't style-file defined
+--line 84 of file ./base-referencias.bib
+Warning--string name "setembro" is undefined
+--line 87 of file ./base-referencias.bib
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
 Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
@@ -89,45 +93,45 @@ Reallocating 'global_strs' (item size: 1) to 4000000 items.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 12 entries,
+You've used 17 entries,
             6714 wiz_defined-function locations,
-            1249 strings with 10711 characters,
-and the built_in function-call counts, 14893 in all, are:
-= -- 1975
-> -- 93
-< -- 493
-+ -- 571
-- -- 33
-* -- 781
-:= -- 1782
-add.period$ -- 24
-call.type$ -- 13
-change.case$ -- 54
-chr.to.int$ -- 19
-cite$ -- 6
-duplicate$ -- 1639
-empty$ -- 602
-format.name$ -- 138
-if$ -- 2893
+            1278 strings with 11437 characters,
+and the built_in function-call counts, 19551 in all, are:
+= -- 2409
+> -- 196
+< -- 562
++ -- 669
+- -- 65
+* -- 1081
+:= -- 2390
+add.period$ -- 42
+call.type$ -- 18
+change.case$ -- 93
+chr.to.int$ -- 30
+cite$ -- 11
+duplicate$ -- 2003
+empty$ -- 901
+format.name$ -- 291
+if$ -- 3909
 int.to.chr$ -- 5
 int.to.str$ -- 3
-missing$ -- 157
-newline$ -- 38
-num.names$ -- 30
-pop$ -- 188
+missing$ -- 243
+newline$ -- 61
+num.names$ -- 55
+pop$ -- 292
 preamble$ -- 1
-purify$ -- 36
+purify$ -- 53
 quote$ -- 0
-skip$ -- 1957
+skip$ -- 2333
 stack$ -- 1
-substring$ -- 672
-swap$ -- 547
-text.length$ -- 6
+substring$ -- 881
+swap$ -- 692
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 44
+while$ -- 81
 width$ -- 0
-write$ -- 92
-(There were 12 warnings)
+write$ -- 168
+(There were 14 warnings)
