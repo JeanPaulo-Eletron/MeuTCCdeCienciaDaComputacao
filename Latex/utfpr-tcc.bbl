@@ -5,11 +5,23 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
+\bibitem[Academy 2018]{datascience}
+\abntrefinfo{Academy}{ACADEMY}{2018}
+{ACADEMY, D.~S. \textbf{O QUE É O TENSORFLOW MACHINE INTELLIGENCE PLATFORM?}
+  2018.
+Dispon{\'\i}vel em:
+  \url{http://datascienceacademy.com.br/blog/o-que-e-o-tensorflow-machine-intelligence-platform/\#:~:text=TensorFlow\%20é\%20uma\%20biblioteca\%20de,computação\%20numérica\%20usando\%20grafos\%20computacionais.&text=O\%20TensorFlow\%20vem\%20se\%20tornando,e\%20aplicações\%20de\%20Inteligência\%20Artificial.}}
+
 \bibitem[BitBucket 2020]{whygit}
 \abntrefinfo{BitBucket}{BITBUCKET}{2020}
 {BITBUCKET, A. \textbf{Why git?} 2020.
 Dispon{\'\i}vel em:
   \url{https://www.atlassian.com/git/tutorials/why-git\#:~:text=One\%20of\%20the\%20biggest\%20advantages,every\%20change\%20to\%20your\%20codebase.}}
+
+\bibitem[Carr et al. 1994]{carr1994use}
+\abntrefinfo{Carr et al.}{CARR et al.}{1994}
+{CARR, L. et al. Why use hytime?
+\textbf{Electronic Publishing}, v.~7, n.~3, p. 163--178, 1994.}
 
 \bibitem[Celestino 2020]{SeparationOfConcerns}
 \abntrefinfo{Celestino}{CELESTINO}{2020}
@@ -22,6 +34,11 @@ Dispon{\'\i}vel em:
 \abntrefinfo{GitHowTo}{GITHOWTO}{2020}
 {GITHOWTO. \textbf{Why git?} 2020.
 Dispon{\'\i}vel em: \url{https://githowto.com/pt-BR}.}
+
+\bibitem[Medina e Ferting 2006]{medina2006algoritmos}
+\abntrefinfo{Medina e Ferting}{MEDINA; FERTING}{2006}
+{MEDINA, M.; FERTING, C. \textbf{Algoritmos e programa{\c{c}}{\~a}o: teoria e
+  pr{\'a}tica}. [S.l.]: Novatec Editora, 2006. 13--22~p.}
 
 \bibitem[Mike 2020]{whocomputing}
 \abntrefinfo{Mike}{MIKE}{2020}
@@ -45,9 +62,14 @@ Dispon{\'\i}vel em:
   \url{https://blog.axosoft.com/learn-git-merge-conflict/\#:~:text=A\%20merge\%20conflict\%20is\%20an,merge\%20commits\%20without\%20your\%20help}.}
 
 \bibitem[Silva 2007]{silva2007construindo}
-\abntrefinfo{Silva}{SILVA}{2007}
+\abntrefinfo{Silva}{SILVA}{2007a}
 {SILVA, M.~S. \textbf{Construindo sites com CSS e (X) HTML: sites controlados
   por folhas de estilo em cascata}. [S.l.]: Novatec Editora, 2007. 49--56~p.}
+
+\bibitem[Silva 2007]{silva2007construindo1}
+\abntrefinfo{Silva}{SILVA}{2007b}
+{SILVA, M.~S. \textbf{Construindo sites com CSS e (X) HTML: sites controlados
+  por folhas de estilo em cascata}. [S.l.]: Novatec Editora, 2007. 37--38~p.}
 
 \bibitem[SourceTree 2020]{sourcetree}
 \abntrefinfo{SourceTree}{SOURCETREE}{2020}
