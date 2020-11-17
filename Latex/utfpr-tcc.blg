@@ -84,6 +84,10 @@ Warning--entry type for "alura" isn't style-file defined
 --line 84 of file ./base-referencias.bib
 Warning--string name "setembro" is undefined
 --line 87 of file ./base-referencias.bib
+Warning--entry type for "datascience" isn't style-file defined
+--line 110 of file ./base-referencias.bib
+Warning--string name "setembro" is undefined
+--line 113 of file ./base-referencias.bib
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
 Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
@@ -93,45 +97,45 @@ Reallocating 'global_strs' (item size: 1) to 4000000 items.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 17 entries,
+You've used 21 entries,
             6714 wiz_defined-function locations,
-            1278 strings with 11437 characters,
-and the built_in function-call counts, 19551 in all, are:
-= -- 2409
-> -- 196
-< -- 562
-+ -- 669
-- -- 65
-* -- 1081
-:= -- 2390
-add.period$ -- 42
-call.type$ -- 18
-change.case$ -- 93
-chr.to.int$ -- 30
-cite$ -- 11
-duplicate$ -- 2003
-empty$ -- 901
-format.name$ -- 291
-if$ -- 3909
-int.to.chr$ -- 5
+            1295 strings with 12083 characters,
+and the built_in function-call counts, 28138 in all, are:
+= -- 3515
+> -- 300
+< -- 859
++ -- 1001
+- -- 97
+* -- 1587
+:= -- 3390
+add.period$ -- 57
+call.type$ -- 22
+change.case$ -- 129
+chr.to.int$ -- 36
+cite$ -- 15
+duplicate$ -- 3034
+empty$ -- 1150
+format.name$ -- 445
+if$ -- 5515
+int.to.chr$ -- 6
 int.to.str$ -- 3
-missing$ -- 243
-newline$ -- 61
-num.names$ -- 55
-pop$ -- 292
+missing$ -- 316
+newline$ -- 79
+num.names$ -- 75
+pop$ -- 403
 preamble$ -- 1
-purify$ -- 53
+purify$ -- 68
 quote$ -- 0
-skip$ -- 2333
+skip$ -- 3352
 stack$ -- 1
-substring$ -- 881
-swap$ -- 692
-text.length$ -- 12
+substring$ -- 1275
+swap$ -- 1053
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 81
+while$ -- 109
 width$ -- 0
-write$ -- 168
-(There were 14 warnings)
+write$ -- 229
+(There were 16 warnings)
