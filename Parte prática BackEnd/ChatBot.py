@@ -69,7 +69,7 @@ def limpa_texto(texto):
     #c'esc
     return texto
 
-print(limpa_texto("ExeMpLo i'm #@"))
+#print(limpa_texto("ExeMpLo i'm #@"))
 
 perguntas_limpas = []
 
@@ -173,5 +173,169 @@ for tamanho in range(1, 25 + 1):
             perguntas_limpas_ordenadas.append(perguntas_para_pk[i[0]])
             respostas_limpas_ordenadas.append(respostas_para_pk[i[0]])
             
+# -------------------------SEQ2SEQ------------------------------------
+
+# Criação de placeholders para as entradas e saídas
+                 # !---- O preenchimento do PAD é para ele ficar com um tamanho constante de nro de letras  ----!
+                 # Olá tudo bem <PAD> <PAD> <PAD> 
+                 # Tudo sim e você 
+
+def entradas_modelo():
+    entradas  = tf.placeholder(tf.int32  , [None, None], name = 'entradas')
+    saidas    = tf.placeholder(tf.int32  , [None, None], name = 'saidas')
+    lr        = tf.placeholder(tf.float32, name = 'learning_rate')
+    # Serve para zerar uma porcentagem dos neurónios
+    keep_prob = tf.placeholder(tf.float32, name = 'keep_prob')
+    return entradas, saidas, lr, keep_prob            
+
+# Pré-Processamento das saídas (alvos)
+# [batch_size, 1] = [64, 1]
+def preprocessamento_saidas(saidas, palavras_para_tk, batch_size):
+   esquerda = tf.fill([batch_size, 1], palavras_para_tk['<SOS>'])
+   direita  = tf.strided_slice(saidas, [0,0], [batch_size, -1], strides = [1,1])
+   saidas_preprocessadas = tf.concat([esquerda,direita], 1) 
+   return saidas_preprocessadas
+
+# Criação da camada da Rede Neural Recorrente do codificador
+def rnn_codificador(rnn_entradas, rnn_tamanho, numero_camadas, keep_prob, tamanho_sequencia):
+    lstm              = tf.contrib.rnn.LSTMCell(rnn_tamanho)
+    lstm_dropout      = tf.contrib.rnn.DropoutWrapper(lstm, input_keep_prob = keep_prob)
+    encoder_celula    = tf.contrib.rnn.MultiRNNCell([lstm_dropout] * numero_camadas)
+    _, encoder_estado = tf.nn.bidirectional_dynamic_rnn(cell_fw = encoder_celula, 
+                                                     cell_bw = encoder_celula,
+                                                     sequence_length=tamanho_sequencia,
+                                                     inputs = rnn_entradas,
+                                                     dtype  = tf.float32)
+    return encoder_estado
+
+# Decodificação da base de dados de treinamento
+
+def decodifica_base_treinamento(encoder_estado, 
+                                decodificador_celula, 
+                                decodificador_embedded_entrada, 
+                                tamanho_sequencia,
+                                decodificador_escopo, 
+                                funcao_saida,
+                                keep_prob, 
+                                batch_size):
+    estados_atencao = tf.zeros([batch_size, 1, decodificador_celula.output_size])
+    attention_keys, attention_values, attention_score_function, attention_construct_function = tf.contrib.seq2seq.prepare_attention(estados_atencao, 
+                                                                                                                                    attention_option = 'bahdanau',
+                                                                                                                                    num_units = decodificador_celula.output_size)
+    funcao_decodificador_treinamento = tf.contrib.seq2seq.attention_decoder_fn_train(encoder_estado[0],
+                                                                                     attention_keys, attention_values, 
+                                                                                     attention_score_function, attention_construct_function,
+                                                                                     name = 'attn_dec_train')
+    decodificador_saida, _, _ = tf.contrib.seq2seq.dynamic_rnn_decoder(decodificador_celula, 
+                                                                       funcao_decodificador_treinamento,
+                                                                       decodificador_embedded_entrada,
+                                                                       tamanho_sequencia,
+                                                                       scope = decodificador_escopo)
+    decodificador_saida_dropout = tf.nn.dropout(decodificador_saida, keep_prob)
+    
+    return funcao_saida(decodificador_saida_dropout)
+
+# Decodificação da base de dados de Testes/Validação
+
+def decodifica_base_teste(encoder_estado, 
+                          decodificador_celula, 
+                          decodificador_embedding_matrix, sos_id, eos_id, tamanho_maximo,
+                          numero_palavras, decodificador_escopo, funcao_saida, 
+                          keep_prob, batch_size):
+    estados_atencao = tf.zeros([batch_size, 1, decodificador_celula.output_size])
+    attention_keys, attention_values, attention_score_function, attention_construct_function = tf.contrib.seq2seq.prepare_attention(estados_atencao, 
+                                                                                                                                    attention_option = 'bahdanau',
+                                                                                                                                    num_units = decodificador_celula.output_size)
+    funcao_decodificador_teste = tf.contrib.seq2seq.attention_decoder_fn_inference(funcao_saida,
+                                                                                   encoder_estado[0],
+                                                                                   attention_keys, 
+                                                                                   attention_values, 
+                                                                                   attention_score_function, 
+                                                                                   attention_construct_function,
+                                                                                   decodificador_embedding_matrix, 
+                                                                                   sos_id, 
+                                                                                   eos_id,
+                                                                                   tamanho_maximo,
+                                                                                   numero_palavras,
+                                                                                   name = 'attn_dec_inf')
+    previsoes_teste, _, _ = tf.contrib.seq2seq.dynamic_rnn_decoder(decodificador_celula, 
+                                                                   funcao_decodificador_teste,
+                                                                   scope = decodificador_escopo)
+    
+    return previsoes_teste
+
+# Criação da rede neural do decodificador
+
+def rnn_decodificador(decodificador_embedded_entrada, decodificador_embeddings_matrix,
+                      codificador_estado, numero_palavras, tamanho_sequencia, rnn_tamanho,
+                      numero_camadas, palavras_para_tk, keep_prob, batch_size):
+    with tf.variable_scope("decodificador") as decodificador_escopo:
+        lstm                 = tf.contrib.rnn.LSTMCell(rnn_tamanho)
+        lstm_dropout         = tf.contrib.rnn.DropoutWrapper(lstm, input_keep_prob = keep_prob)
+        decodificador_celula = tf.contrib.rnn.MultiRNNCell([lstm_dropout] * numero_camadas)
+        pesos                = tf.truncated_normal_initializer(stddev = 0.1) # Desvio padrão 0,1
+        biases               = tf.zeros_initializer()
+        funcao_saida         = lambda x: tf.contrib.layers.fully_connected(x, numero_palavras,
+                                                                     None, 
+                                                                     scope = decodificador_escopo,
+                                                                     weights_initializer= pesos,
+                                                                     biases_initializer = biases)
+
+    previsoes_treinamento = decodifica_base_treinamento(codificador_estado,
+                                                        decodificador_celula,
+                                                        decodificador_embedded_entrada,
+                                                        tamanho_sequencia,
+                                                        decodificador_escopo,
+                                                        funcao_saida,
+                                                        keep_prob,
+                                                        batch_size)
+    decodificador_escopo.reuse_variables()
+    previsoes_teste = decodifica_base_teste(codificador_estado,
+                                            decodificador_celula,
+                                            decodificador_embeddings_matrix,
+                                            palavras_para_tk['<SOS>'],
+                                            palavras_para_tk['<EOS>'],
+                                            tamanho_sequencia - 1,
+                                            numero_palavras,
+                                            decodificador_escopo,
+                                            funcao_saida,
+                                            keep_prob,
+                                            batch_size)
+    return previsoes_treinamento, previsoes_teste
+
+# Criação do modelo Seq2Seq
+def modelo_seq2seq(entradas, saidas, keep_prob, batch_size, tamanho_sequencia,
+                   numero_palavras_respostas, numero_palavras_perguntas,
+                   tamanho_codificador_embeddings, tamanho_decodificador_embeddings,
+                   rnn_tamanho, numero_camadas, perguntas_palavras_tk):
+    codificador_embedded_entrada = tf.contrib.layers.embed_sequence(entradas,
+                                                                    numero_palavras_respostas + 1,
+                                                                    tamanho_codificador_embeddings,
+                                                                    initializer = tf.random_uniform_initializer(0,1)
+                                                                    )
+    
+    codificador_estado = rnn_codificador(codificador_embedded_entrada,
+                                         rnn_tamanho, numero_camadas,
+                                         keep_prob, tamanho_sequencia)
+    saidas_preprocessadas = preprocessamento_saidas(saidas, perguntas_palavras_tk, batch_size)
+    
+    decodificador_embeddings_matrix = tf.Variable(tf.random_uniform([numero_palavras_perguntas + 1,
+                                                                    tamanho_codificador_embeddings],0,1)
+                                                  )
+    decodificador_embeddings_entradas = tf.nn.embedding_lookup(decodificador_embeddings_matrix,
+                                                               saidas_preprocessadas)
+    
+    previsoes_treinamento, previsoes_teste = rnn_decodificador(decodificador_embeddings_entradas,
+                                                               decodificador_embeddings_matrix,
+                                                               codificador_estado,
+                                                               numero_palavras_perguntas,
+                                                               tamanho_sequencia,
+                                                               rnn_tamanho,
+                                                               numero_camadas,
+                                                               perguntas_palavras_tk,
+                                                               keep_prob,
+                                                               batch_size)
+    return previsoes_treinamento, previsoes_teste
 
     
+# $!$ Fazer um tratamento para ele não ignorar o "!" independente do nro de aparições
