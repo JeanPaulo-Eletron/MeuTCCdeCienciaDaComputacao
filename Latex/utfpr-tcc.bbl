@@ -18,6 +18,11 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://www.atlassian.com/git/tutorials/why-git\#:~:text=One\%20of\%20the\%20biggest\%20advantages,every\%20change\%20to\%20your\%20codebase.}}
 
+\bibitem[BrockmanMira MuratiPeter 2020]{OpenAI}
+\abntrefinfo{BrockmanMira MuratiPeter}{BROCKMANMIRA MURATIPETER}{2020}
+{BROCKMANMIRA MURATIPETER, W. .~O. G. \textbf{OpenAI API}. 2020.
+Dispon{\'\i}vel em: \url{https://openai.com/blog/openai-api/}.}
+
 \bibitem[Carr et al. 1994]{carr1994use}
 \abntrefinfo{Carr et al.}{CARR et al.}{1994}
 {CARR, L. et al. Why use hytime?
@@ -34,6 +39,17 @@ Dispon{\'\i}vel em:
 \abntrefinfo{GitHowTo}{GITHOWTO}{2020}
 {GITHOWTO. \textbf{Why git?} 2020.
 Dispon{\'\i}vel em: \url{https://githowto.com/pt-BR}.}
+
+\bibitem[Hahn 2018]{place}
+\abntrefinfo{Hahn}{HAHN}{2018}
+{HAHN, R. \textbf{8 Ótimos Sites de Placeholder na Web}. 2018.
+Dispon{\'\i}vel em:
+  \url{https://king.host/blog/2018/07/8-otimos-sites-de-placeholder-na-web/}.}
+
+\bibitem[Haykin 2007]{haykin2007redes}
+\abntrefinfo{Haykin}{HAYKIN}{2007}
+{HAYKIN, S. \textbf{Redes neurais: princ{\'\i}pios e pr{\'a}tica}. [S.l.]:
+  Bookman Editora, 2007. 27--31,75~p.}
 
 \bibitem[Medina e Ferting 2006]{medina2006algoritmos}
 \abntrefinfo{Medina e Ferting}{MEDINA; FERTING}{2006}

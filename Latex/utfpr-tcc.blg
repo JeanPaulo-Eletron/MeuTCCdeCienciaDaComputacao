@@ -88,6 +88,14 @@ Warning--entry type for "datascience" isn't style-file defined
 --line 110 of file ./base-referencias.bib
 Warning--string name "setembro" is undefined
 --line 113 of file ./base-referencias.bib
+Warning--entry type for "OpenAI" isn't style-file defined
+--line 134 of file ./base-referencias.bib
+Warning--string name "junho" is undefined
+--line 137 of file ./base-referencias.bib
+Warning--entry type for "place" isn't style-file defined
+--line 142 of file ./base-referencias.bib
+Warning--string name "julho" is undefined
+--line 145 of file ./base-referencias.bib
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
 Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
@@ -97,45 +105,45 @@ Reallocating 'global_strs' (item size: 1) to 4000000 items.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 21 entries,
+You've used 24 entries,
             6714 wiz_defined-function locations,
-            1295 strings with 12083 characters,
-and the built_in function-call counts, 28138 in all, are:
-= -- 3515
-> -- 300
-< -- 859
-+ -- 1001
-- -- 97
-* -- 1587
-:= -- 3390
-add.period$ -- 57
-call.type$ -- 22
-change.case$ -- 129
-chr.to.int$ -- 36
-cite$ -- 15
-duplicate$ -- 3034
-empty$ -- 1150
-format.name$ -- 445
-if$ -- 5515
+            1309 strings with 12407 characters,
+and the built_in function-call counts, 31935 in all, are:
+= -- 3964
+> -- 345
+< -- 964
++ -- 1121
+- -- 112
+* -- 1801
+:= -- 3866
+add.period$ -- 69
+call.type$ -- 25
+change.case$ -- 147
+chr.to.int$ -- 39
+cite$ -- 18
+duplicate$ -- 3436
+empty$ -- 1329
+format.name$ -- 514
+if$ -- 6270
 int.to.chr$ -- 6
 int.to.str$ -- 3
-missing$ -- 316
-newline$ -- 79
-num.names$ -- 75
-pop$ -- 403
+missing$ -- 367
+newline$ -- 93
+num.names$ -- 90
+pop$ -- 468
 preamble$ -- 1
-purify$ -- 68
+purify$ -- 77
 quote$ -- 0
-skip$ -- 3352
+skip$ -- 3766
 stack$ -- 1
-substring$ -- 1275
-swap$ -- 1053
-text.length$ -- 16
+substring$ -- 1433
+swap$ -- 1191
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 109
+while$ -- 129
 width$ -- 0
-write$ -- 229
-(There were 16 warnings)
+write$ -- 272
+(There were 20 warnings)

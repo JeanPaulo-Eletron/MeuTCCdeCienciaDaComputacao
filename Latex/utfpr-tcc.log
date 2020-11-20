@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.25)  16 NOV 2020 22:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.25)  19 NOV 2020 22:41
 entering extended mode
 **./utfpr-tcc.tex
 (utfpr-tcc.tex
@@ -1333,7 +1333,7 @@ l.16 \cleardoublepage
 ame identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.36 ...sline {part}{Ap\^endices}{20}{section*.14}
+l.38 ...sline {part}{Ap\^endices}{21}{section*.14}
                                                   % [12
 
 
@@ -1374,7 +1374,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--22
 
 
 ]
-<./images/Figure_1.png, id=175, 552.56438pt x 179.92218pt>
+<./images/Figure_1.png, id=179, 552.56438pt x 179.92218pt>
 File: ./images/Figure_1.png Graphic file (type png)
 <use ./images/Figure_1.png>
 Package pdftex.def Info: ./images/Figure_1.png  used on input line 50.
@@ -1385,7 +1385,7 @@ Package pdftex.def Info: ./images/Figure_1.png  used on input line 50.
                                                   
 l.67 V
       antagens de usÃ¡-lo: <./images/Figure_1.png>]
-<./images/Figure_2.png, id=190, 553.31718pt x 292.84406pt>
+<./images/Figure_2.png, id=194, 553.31718pt x 292.84406pt>
 File: ./images/Figure_2.png Graphic file (type png)
 <use ./images/Figure_2.png>
 Package pdftex.def Info: ./images/Figure_2.png  used on input line 86.
@@ -1395,7 +1395,7 @@ Overfull \hbox (42.98087pt too wide) in paragraph at lines 86--87
  [][] 
  []
 
-<./images/Figure_3.png, id=191, 618.05907pt x 327.47343pt>
+<./images/Figure_3.png, id=195, 618.05907pt x 327.47343pt>
 File: ./images/Figure_3.png Graphic file (type png)
 <use ./images/Figure_3.png>
 Package pdftex.def Info: ./images/Figure_3.png  used on input line 102.
@@ -1417,7 +1417,7 @@ ignored
                                                   
 l.141 	\subsection
                   {CAMADAS DE DESENVOLVIMENTO} <./images/Figure_3.png>]
-<./images/Figure_4.png, id=210, 557.08125pt x 298.86656pt>
+<./images/Figure_4.png, id=214, 557.08125pt x 298.86656pt>
 File: ./images/Figure_4.png Graphic file (type png)
 <use ./images/Figure_4.png>
 Package pdftex.def Info: ./images/Figure_4.png  used on input line 148.
@@ -1457,7 +1457,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<./images/Figure_5.png, id=245, 565.36218pt x 207.02344pt>
+<./images/Figure_5.png, id=249, 565.36218pt x 207.02344pt>
 File: ./images/Figure_5.png Graphic file (type png)
 <use ./images/Figure_5.png>
 Package pdftex.def Info: ./images/Figure_5.png  used on input line 212.
@@ -1469,7 +1469,7 @@ Package pdftex.def Info: ./images/Figure_5.png  used on input line 212.
                                                   
 l.224 
        <./images/Figure_5.png>]
-<./images/Figure_6.png, id=252, 338.76563pt x 412.54124pt>
+<./images/Figure_6.png, id=256, 338.76563pt x 412.54124pt>
 File: ./images/Figure_6.png Graphic file (type png)
 <use ./images/Figure_6.png>
 Package pdftex.def Info: ./images/Figure_6.png  used on input line 229.
@@ -1480,7 +1480,7 @@ Package pdftex.def Info: ./images/Figure_6.png  used on input line 229.
                                                   
 l.241 
        <./images/Figure_6.png>] [11]
-<./images/Figure_7.png, id=268, 395.22656pt x 268.75406pt>
+<./images/Figure_7.png, id=272, 395.22656pt x 268.75406pt>
 File: ./images/Figure_7.png Graphic file (type png)
 <use ./images/Figure_7.png>
 Package pdftex.def Info: ./images/Figure_7.png  used on input line 272.
@@ -1490,7 +1490,7 @@ Package pdftex.def Info: ./images/Figure_7.png  used on input line 272.
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.294 
-       <./images/Figure_7.png>]) [13] [14]
+       <./images/Figure_7.png>] [13]) [14]
 \openout2 = `tcc1/problemas.aux'.
 
  (tcc1/problemas.tex) [15
@@ -1571,66 +1571,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--20
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
 []\T1/ptm/m/n/12 (+20) CELESTINO, A. L. \T1/ptm/b/n/12 En-ten-dendo a Se-pa-ra-
 ção de Con-cei-tos (Se-pa-ra-tion of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
 \T1/ptm/b/n/12 Con-cerns  SoC)\T1/ptm/m/n/12 (+20) . 2020. Dis-po-ní-vel em: [
 ][]$<[]https : / / www . prossionaisti . com . br /
  []
 
 
-Underfull \hbox (badness 3019) in paragraph at lines 32--32
+Underfull \hbox (badness 3019) in paragraph at lines 37--37
 \T1/ptm/m/n/12 (+20) entendendo-[]a-[]separacao-[]de-[]conceitos-[]separation-[
 ]of-[]concerns-[]soc / >[]$[][].  Ci-tado na pá-gina
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--47
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
 []\T1/ptm/m/n/12 (+20) MIKE, D. \T1/ptm/b/n/12 What is com-pu-ting? \T1/ptm/m/n
 /12 (+20) 2020. Dis-po-ní-vel em: [][]$<[]https : / / www . quora . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 \T1/ptm/m/n/12 (+10) learn-[]git-[]merge-[]conict / # : ~ : text = A % 20merge
  % 20conict % 20is % 20an ,[] merge % 20commits %
  []
 
-)) [19
+[19
 
 
 
 
-]
+])) [20]
 \openout2 = `tcc1/apendices.aux'.
 
- (tcc1/apendices.tex [20
+ (tcc1/apendices.tex [21
 
 
 
 
 
-] [21
+] [22
 
-]) [22
+]) [23
 
 ]
 \openout2 = `tcc1/anexos.aux'.
 
- (tcc1/anexos.tex [23
+ (tcc1/anexos.tex [24
 
 
 
 
 
-] [24
+] [25
 
 ])
-[25
+[26
 
 ] 
 AED: lastpage setting LastPage
@@ -1664,32 +1664,27 @@ LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
 (tcc1/delimitacao.aux) (tcc1/problemas.aux) (tcc1/objetivos.aux)
 (tcc1/justificativa.aux) (tcc1/referencial-teorico.aux) (comum/referencias.aux)
 (tcc1/apendices.aux) (tcc1/anexos.aux))
-
-Package rerunfilecheck Warning: File `utfpr-tcc.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `utfpr-tcc.brf':
-(rerunfilecheck)             Before: AE62A99A3D1E2FF4775CD962C4608F42;1044
-(rerunfilecheck)             After:  26B00858A2E3927EE280146545548D9B;1158.
+Package rerunfilecheck Info: File `utfpr-tcc.brf' has not changed.
+(rerunfilecheck)             Checksum: D7537B52BA8D70311F52E4EA2D1A568D;1301.
  )
 (\end occurred when \iftrue on line 72 was incomplete) 
 Here is how much of TeX's memory you used:
- 17282 strings out of 480257
- 276533 string characters out of 2881437
- 752739 words of memory out of 3000000
- 33032 multiletter control sequences out of 15000+200000
- 571194 words of font info for 186 fonts, out of 3000000 for 9000
+ 17316 strings out of 480257
+ 277001 string characters out of 2881437
+ 755342 words of memory out of 3000000
+ 33063 multiletter control sequences out of 15000+200000
+ 571064 words of font info for 184 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 102i,13n,103p,1747b,496s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 102i,13n,103p,1764b,582s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/jeanp/AppData/L
 ocal/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/jeanp/AppData/Local/
 Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/jeanp/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/jeanp/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/jeanp/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on utfpr-tcc.pdf (38 pages, 810375 bytes).
+Output written on utfpr-tcc.pdf (39 pages, 818076 bytes).
 PDF statistics:
- 546 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
- 26009 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 579 PDF objects out of 1000 (max. 8388607)
+ 113 named destinations out of 1000 (max. 500000)
+ 26025 words of extra memory for PDF output out of 29859 (max. 10000000)
 
